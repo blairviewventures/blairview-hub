@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blairview Hub — Setup Guide</title>
+<style>
+  :root { --ink:#111111; --forest:#1C3829; --sand:#F4F0E6; --sandm:#EDE8DC; --white:#FDFCF9; --muted:#5A7A5C; --amber:#8B6914; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Georgia',serif; background:var(--sand); color:var(--ink); font-size:15px; line-height:1.7; }
+  .topbar { background:var(--ink); padding:14px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-family:'Arial',sans-serif; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(244,240,230,.5); }
+  .hero { background:var(--forest); padding:40px; }
+  .hero h1 { font-size:28px; color:var(--sand); font-weight:400; margin-bottom:8px; }
+  .hero p { font-family:'Arial',sans-serif; font-size:13px; color:rgba(244,240,230,.6); max-width:600px; line-height:1.6; }
+  .main { max-width:860px; margin:0 auto; padding:48px 40px; }
+  h2 { font-size:18px; font-weight:600; color:var(--ink); margin:40px 0 6px; }
+  h3 { font-family:'Arial',sans-serif; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700; margin:28px 0 10px; }
+  p { margin-bottom:14px; color:rgba(17,17,17,.75); }
+  .step { background:var(--white); border:1px solid rgba(17,17,17,.08); border-left:4px solid var(--forest); padding:24px 28px; margin-bottom:6px; }
+  .step-n { font-family:'Arial',sans-serif; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:6px; }
+  .step-title { font-size:16px; font-weight:600; color:var(--ink); margin-bottom:10px; }
+  .step-body { font-size:14px; color:rgba(17,17,17,.7); line-height:1.7; }
+  .step-body strong { color:var(--ink); }
+  .code { background:var(--ink); color:rgba(244,240,230,.85); font-family:'Courier New',monospace; font-size:12px; padding:16px 20px; margin:12px 0; line-height:1.7; white-space:pre-wrap; border-left:3px solid var(--forest); }
+  .note { background:var(--sandm); border-left:3px solid var(--amber); padding:14px 18px; margin:12px 0; font-size:13px; color:rgba(17,17,17,.7); }
+  .note strong { color:var(--amber); }
+  .divider { height:1px; background:rgba(17,17,17,.08); margin:40px 0; }
+  .section-header { background:var(--ink); color:var(--sand); padding:12px 20px; font-family:'Arial',sans-serif; font-size:10px; letter-spacing:.2em; text-transform:uppercase; font-weight:700; margin:40px 0 0; }
+  img-placeholder { display:block; background:rgba(17,17,17,.05); border:2px dashed rgba(17,17,17,.12); padding:24px; text-align:center; font-family:'Arial',sans-serif; font-size:12px; color:rgba(17,17,17,.35); margin:12px 0; }
+  .toc { background:var(--white); border:1px solid rgba(17,17,17,.08); padding:24px 28px; margin-bottom:40px; }
+  .toc h3 { margin-top:0; }
+  .toc ol { padding-left:20px; }
+  .toc li { margin-bottom:6px; font-family:'Arial',sans-serif; font-size:13px; }
+  .toc a { color:var(--forest); }
+  footer { background:var(--ink); padding:20px 40px; font-family:'Arial',sans-serif; font-size:10px; color:rgba(244,240,230,.3); letter-spacing:.06em; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Blairview Ventures — Hub Setup Guide</div>
+  <div class="brand">March 9, 2026</div>
+</div>
+
+<div class="hero">
+  <h1>How to Store Your Hub and Use It Across Every Claude Session</h1>
+  <p>Step-by-step. Never done GitHub before. Takes about 15 minutes total. After setup, updating takes 60 seconds per session.</p>
+</div>
+
+<div class="main">
+
+  <div class="toc">
+    <h3>What You're Building</h3>
+    <ol>
+      <li><a href="#part1">Part 1 — GitHub Pages: your hub at a permanent URL</a></li>
+      <li><a href="#part2">Part 2 — Using the hub to start any Claude session instantly</a></li>
+      <li><a href="#part3">Part 3 — Updating the hub after each session (60 seconds)</a></li>
+      <li><a href="#part4">Part 4 — The React artifact inside Claude (no GitHub needed)</a></li>
+    </ol>
+    <p style="margin-top:14px;margin-bottom:0;font-size:13px;color:rgba(17,17,17,.5);">Result: your full Blairview context lives at a permanent bookmarkable URL. Any new Claude session gets the full picture in 30 seconds. Everything stays current.</p>
+  </div>
+
+  <!-- PART 1 -->
+  <div id="part1" class="section-header">Part 1 — GitHub Pages Setup (one time, ~10 minutes)</div>
+
+  <div class="step">
+    <div class="step-n">Step 1 of 6</div>
+    <div class="step-title">Create a free GitHub account</div>
+    <div class="step-body">
+      <strong>Go to:</strong> <a href="https://github.com">github.com</a> → click <strong>Sign up</strong><br><br>
+      Use a personal email (not work). Username suggestion: <strong>giannaluppino</strong> or <strong>blairviewventures</strong><br><br>
+      Verify your email when prompted. That's it — free account, no credit card.
+      <div class="note"><strong>Note:</strong> GitHub is where developers store code. You're using it as free hosting for one HTML file. You don't need to understand anything else about it.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-n">Step 2 of 6</div>
+    <div class="step-title">Create a new repository (think of it as a folder)</div>
+    <div class="step-body">
+      Once logged in:<br><br>
+      1. Click the <strong>+</strong> icon in the top-right corner → <strong>New repository</strong><br>
+      2. Repository name: <strong>blairview-hub</strong> (lowercase, hyphens, no spaces)<br>
+      3. Description: "Blairview Ventures session hub" (optional)<br>
+      4. Select <strong>Public</strong> (required for free GitHub Pages)<br>
+      5. Check the box: <strong>Add a README file</strong><br>
+      6. Click <strong>Create repository</strong>
+      <div class="note"><strong>Why Public?</strong> Free GitHub Pages requires a public repo. The hub contains no sensitive information — all pricing, client names, and personal data should not be in this file. It's a context and strategy document only.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-n">Step 3 of 6</div>
+    <div class="step-title">Upload your hub file</div>
+    <div class="step-body">
+      You should now see your empty repository page.<br><br>
+      1. Download <strong>BLAIRVIEW_SESSION_HUB.html</strong> from Claude to your computer<br>
+      2. Rename the file on your computer to: <strong>index.html</strong> (this is important — it must be called index.html)<br>
+      3. On the GitHub repo page, click <strong>Add file</strong> → <strong>Upload files</strong><br>
+      4. Drag <strong>index.html</strong> into the upload area (or click to browse)<br>
+      5. Scroll down to <strong>Commit changes</strong><br>
+      6. Leave the default message ("Add files via upload") and click <strong>Commit changes</strong>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-n">Step 4 of 6</div>
+    <div class="step-title">Enable GitHub Pages (turns your file into a live website)</div>
+    <div class="step-body">
+      1. In your repository, click <strong>Settings</strong> (tab at the top, far right)<br>
+      2. In the left sidebar, scroll down and click <strong>Pages</strong><br>
+      3. Under <strong>Source</strong>, select <strong>Deploy from a branch</strong><br>
+      4. Under <strong>Branch</strong>, select <strong>main</strong> and keep <strong>/ (root)</strong><br>
+      5. Click <strong>Save</strong><br><br>
+      Wait 2–3 minutes. Refresh the page. You'll see a green box that says:<br>
+      <div class="code">Your site is live at https://[yourusername].github.io/blairview-hub/</div>
+      Bookmark that URL. That is your permanent hub address.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-n">Step 5 of 6</div>
+    <div class="step-title">Also upload your USER.md for Claude attachments</div>
+    <div class="step-body">
+      Back in your repository, click <strong>Add file</strong> → <strong>Upload files</strong> again.<br><br>
+      Upload: <strong>USER_md_Gianna_Luppino.md</strong> (keep this filename as-is)<br><br>
+      Commit it. It now lives at:<br>
+      <div class="code">https://[yourusername].github.io/blairview-hub/USER_md_Gianna_Luppino.md</div>
+      You can attach this file directly to any Claude conversation for full context.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-n">Step 6 of 6</div>
+    <div class="step-title">Test it</div>
+    <div class="step-body">
+      Open your hub URL in a browser. You should see the full session hub.<br><br>
+      Bookmark it on your phone and computer. Label it: <strong>Blairview Hub</strong><br><br>
+      That's Part 1 done. Your hub is live.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PART 2 -->
+  <div id="part2" class="section-header">Part 2 — Starting Any Claude Session Instantly</div>
+
+  <p style="margin-top:20px;">You now have two ways to give Claude full context in any new chat:</p>
+
+  <h2>Method A — Paste the starter text (fastest, 10 seconds)</h2>
+  <p>The USER.md has a "NEW CHAT STARTER" section at the top. Copy that text and paste it as your first message in any new Claude session. Claude will have the full brand, pricing, ICP, and lead context immediately.</p>
+  <p>The starter text is also in the React artifact hub (the "New Chat Starter" tab has a one-click copy button).</p>
+
+  <h2>Method B — Attach the file (most complete)</h2>
+  <p>When starting a new Claude chat, click the attachment (paperclip) icon and upload <strong>USER_md_Gianna_Luppino.md</strong>. Then say: <em>"This is my full business context. Please read it before we begin."</em></p>
+  <p>This gives Claude everything — career arc, talk tracks by audience, all 10 revenue arms, hard limits, timing rules.</p>
+
+  <h2>Method C — Link to the hub (when Claude has web access)</h2>
+  <div class="code">My session hub is at: https://[yourusername].github.io/blairview-hub/
+Please read it for full context before we begin.</div>
+
+  <div class="note"><strong>Best practice:</strong> Use Method A every session (it's instant). Use Method B for complex sessions where you want Claude to have the deep career detail. Method C when you want Claude to pull the absolute latest version.</div>
+
+  <div class="divider"></div>
+
+  <!-- PART 3 -->
+  <div id="part3" class="section-header">Part 3 — Updating the Hub After Each Session (60 seconds)</div>
+
+  <p style="margin-top:20px;">At the end of any session where something significant changed — new leads, updated pricing, decisions made, files created — ask Claude:</p>
+
+  <div class="code">"Update the session hub HTML and USER.md with everything we decided today. Give me the updated files to download."</div>
+
+  <p>Claude will generate updated versions. Then:</p>
+
+  <div class="step">
+    <div class="step-n">Update Step 1</div>
+    <div class="step-title">Download the updated files from Claude</div>
+    <div class="step-body">
+      Download the updated <strong>index.html</strong> and/or <strong>USER_md_Gianna_Luppino.md</strong> to your computer.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-n">Update Step 2</div>
+    <div class="step-title">Replace the files on GitHub</div>
+    <div class="step-body">
+      1. Go to <strong>github.com/[yourusername]/blairview-hub</strong><br>
+      2. Click on <strong>index.html</strong> in the file list<br>
+      3. Click the <strong>pencil icon</strong> (Edit this file) — top right of the file view<br>
+      4. Select all the text (Cmd+A or Ctrl+A) and delete it<br>
+      5. Paste in the new HTML content<br>
+      6. Scroll down → click <strong>Commit changes</strong><br><br>
+      Live in 2 minutes. That's it.
+      <div class="note"><strong>Faster method:</strong> On the file page, click the pencil → then drag-and-drop the new file onto the editor. GitHub replaces the content automatically.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PART 4 -->
+  <div id="part4" class="section-header">Part 4 — The React Artifact (lives inside Claude)</div>
+
+  <p style="margin-top:20px;">The <strong>BLAIRVIEW_SESSION_HUB.jsx</strong> artifact is a separate thing from the GitHub hub. Here's how it's different and when to use each:</p>
+
+  <table style="width:100%;border-collapse:collapse;background:var(--white);margin-bottom:20px;">
+    <thead>
+      <tr>
+        <th style="background:var(--ink);color:var(--sand);font-family:'Arial',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;text-align:left;"></th>
+        <th style="background:var(--ink);color:var(--sand);font-family:'Arial',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;text-align:left;">React Artifact (.jsx)</th>
+        <th style="background:var(--ink);color:var(--sand);font-family:'Arial',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;text-align:left;">GitHub Pages (.html)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-weight:600;font-size:13px;">Where it lives</td><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-size:13px;">Inside Claude only</td><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-size:13px;">Public URL, any browser</td></tr>
+      <tr style="background:var(--sandm);"><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-weight:600;font-size:13px;">Storage</td><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-size:13px;">Persistent (survives new chats)</td><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-size:13px;">Static (manual update)</td></tr>
+      <tr><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-weight:600;font-size:13px;">Best for</td><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-size:13px;">Working sessions, tracking, dynamic data</td><td style="padding:10px 16px;border-bottom:1px solid rgba(17,17,17,.06);font-size:13px;">Reference, sharing, new chat context</td></tr>
+      <tr style="background:var(--sandm);"><td style="padding:10px 16px;font-weight:600;font-size:13px;">Update method</td><td style="padding:10px 16px;font-size:13px;">Ask Claude to update it in any session</td><td style="padding:10px 16px;font-size:13px;">Download → paste → commit (60 sec)</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Use both.</strong> The artifact for live working sessions and the lead tracker. The GitHub hub as your bookmark and new-session starter. They complement each other.</p>
+
+  <div class="divider"></div>
+
+  <h2 style="margin-top:0;">Quick Reference Card</h2>
+  <div class="code">STARTING A NEW SESSION (10 seconds):
+→ Open new Claude chat
+→ Paste the starter text from USER.md (or attach the file)
+→ Done. Full context active.
+
+UPDATING AFTER A SESSION (60 seconds):
+→ Ask Claude: "Update the hub and USER.md with today's changes"
+→ Download updated files
+→ Go to github.com/[yourusername]/blairview-hub
+→ Click index.html → pencil icon → select all → paste → commit
+→ Live in 2 minutes
+
+YOUR HUB URL:
+https://[yourusername].github.io/blairview-hub/
+
+YOUR USER.md URL:
+https://[yourusername].github.io/blairview-hub/USER_md_Gianna_Luppino.md</div>
+
+</div>
+
+<footer>Blairview Ventures LLC · Gianna Luppino · Setup Guide v1 · March 9, 2026</footer>
+</body>
+</html>
