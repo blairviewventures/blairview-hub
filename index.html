@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blairview Ventures — Session Hub</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, serif; background: #F4F0E6; color: #111111; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #EDE8DC; }
+  ::-webkit-scrollbar-thumb { background: #5A7A5C; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const C = {
+  ink:"#111111",forest:"#1C3829",forestMid:"#2D5A3D",muted:"#5A7A5C",
+  sand:"#F4F0E6",sandD:"#E6E0D4",sandM:"#EDE8DC",white:"#FDFCF9",
+  amber:"#8B6914",amberBg:"#FFF8E7",blue:"#2C5F8A",blueBg:"#EBF2F8",
+  red:"#8B1C1C",redBg:"#FFF0F0",
+};
+
+const BRAND_CORRECTION = `⚠️ BRAND CORRECTION (v5 — March 9, 2026)
+
+The brand is NOT "financial services CX consultant."
+
+It IS: "I build consumer-facing digital experiences that users know,
+love, and trust — products that have touched the lives of hundreds of millions."
+
+Financial services is ONE vertical Gianna has worked in.
+It is not the identity and must never lead the brand.
+
+Credentials that support the correct frame:
+· HBO GO — launched before streaming had a playbook. People loved this product.
+· Pay with Membership Rewards in Uber — used by hundreds of millions.
+· JPMC Wallets — used by millions of consumers daily.
+· Morgan Stanley mobile — consumer UX problem at institutional scale.
+
+WRONG: "Financial services CX consultant"
+RIGHT: "Builder of consumer-facing experiences users can't imagine living without"`;
+
+const CHAT_STARTER = `I'm Gianna Luppino, Founder of Blairview Ventures LLC. Extensive build history together. Key context:
+
+BRAND CORE: I build consumer-facing digital experiences that users know, love, and trust — products that have touched the lives of hundreds of millions. 17 years. HBO GO (launched before streaming existed), Pay with Membership Rewards inside Uber (hundreds of millions of users, before embedded finance was a category), JPMC digital wallet (millions of daily consumers), Morgan Stanley mobile. Do NOT frame me as a financial services consultant. Financial services is one vertical. Consumer experience excellence is the identity.
+
+DO NOT NAME JPMC IN ANY PUBLIC MATERIAL.
+
+BUSINESS: Blairview Ventures LLC. Armonk NY. ~50% marginal rate. Last JPMC day ~early May 2026.
+
+BRAND LOCKED: Ink & Sand. #111111/#1C3829/#F4F0E6. Georgia/Playfair + DM Sans. No em dashes ever. Lead with client's problem.
+
+PRICING (contact form only, never on service cards):
+$4,500 Product Risk Brief | $12K Revenue Leak Audit | $35–50K 90-Day CX Sprint | $12–15K/mo Retainer | $15–22K Consumer Launch Advisory | $28–40K Consumer Launch Advisory (embedded) | $18–25K AI Product Advisory (any industry, not FS-specific) | $197 Interview Guide | $750 Interview Session | $2,500 Full Interview Prep
+
+ICP: Any company building consumer-facing or end-user-facing digital products. Any industry. Series A–C preferred.
+
+10 REVENUE ARMS: Consulting ladder, digital products, Consumer Launch Advisory, AI Product Advisory (any industry), Interview Coaching ($197→$750→$2,500), Advisory Board Seats, Methodology Licensing (Year 2), SaaS tool (Year 2), VC referral network, Platforms.
+
+LEADS: Avantos (PRIORITY — send first), Lio (time-sensitive), Harper, Phia, Rain, Nevis/Glenbrook (secondary).
+
+HER NEW STANDARD: Distribution only. Not a credential. Remove from all materials.
+
+Hub: https://blairviewventures.github.io/blairview-hub/`;
+
+const LOCKED = [
+  {key:"Brand Identity",val:"Consumer experience builder. NOT financial services consultant.",sub:"Lead with: products used by hundreds of millions. HBO GO · Uber/AmEx · JPMC Wallets · MS mobile"},
+  {key:"Brand Palette",val:"Ink & Sand — LOCKED",sub:"#111111 · #1C3829 forest (accents only) · #F4F0E6 sand · Georgia/Playfair + DM Sans"},
+  {key:"Pricing Visibility",val:"Contact form dropdown ONLY",sub:"Never on service cards. Buyer must engage before seeing the number."},
+  {key:"JPMC Name",val:"Never in public materials",sub:"Use 'major US financial institution' or omit entirely"},
+  {key:"Her New Standard",val:"Distribution channel only",sub:"NOT a credential. Remove from all bios, profiles, website."},
+  {key:"Voice Rules",val:"No em dashes. Lead with their problem.",sub:"Under 100 words cold outreach. One clear question at end."},
+  {key:"Experience",val:"17+ years — throughout all materials",sub:""},
+  {key:"Approvals",val:"All outreach reviewed before sending",sub:"Nothing autonomous. Ever."},
+];
+
+const ARMS = [
+  {n:"01",label:"Consulting Ladder",timing:"May 2026",color:C.forest,detail:"Product Risk Brief ($4.5K) → Revenue Leak Audit ($12K) → 90-Day CX Sprint ($35–50K) → Post-Sprint Retainer ($12–15K/mo). ANY consumer-facing product company. Any industry."},
+  {n:"02",label:"Digital Products",timing:"Week 1",color:C.forest,detail:"The Directness Penalty ($47) · The Real Offer ($67) · CX Audit Playbook ($147) · Team License ($750/yr)"},
+  {n:"03",label:"Consumer Launch Advisory",timing:"May 2026",color:C.forest,detail:"$15–22K (30-day) / $28–40K (60-day embedded). Companies launching first major consumer-facing product. Lead with HBO GO + AmEx/Uber credentials."},
+  {n:"04",label:"AI Product Advisory",timing:"May 2026",color:C.blue,detail:"$18–25K. Any company building AI-powered user-facing product. NOT FS-specific. Credential: production AI UX in regulated environment — transferable to any industry."},
+  {n:"05",label:"Interview Coaching",timing:"Build next",color:C.blue,detail:"$197 guide · $750 single session · $2,500 full prep. Senior PMs targeting VP/CPO/Director at Fortune 500, any industry. Volume play. Feeds consulting referrals long-term."},
+  {n:"06",label:"Advisory Board Seats",timing:"After Sprint 1",color:C.muted,detail:"Cash $1.5–3K/mo or equity 0.1–0.5% FAST Agreement. 3–5 seats by Year 2. Close at final Sprint debrief."},
+  {n:"07",label:"CX Methodology Licensing",timing:"Year 2",color:C.muted,detail:"$2–75K/yr. Any consultancy serving consumer product companies. First conversation Month 9–12."},
+  {n:"08",label:"SaaS CX Assessment Tool",timing:"Year 2",color:C.muted,detail:"Anthropic API-powered. Month 6–7 spec."},
+  {n:"09",label:"VC Referral Network",timing:"Month 1–2",color:C.amber,detail:"20–30 partners at Canaan, Contour, Lerer Hippeau, RRE, FirstMark, Bain Capital Ventures, Nyca, QED, Conversion Capital."},
+  {n:"10",label:"Platforms",timing:"Week 1",color:C.amber,detail:"GoFractional, Toptal, referral network."},
+];
+
+const VALUE_LADDER = [
+  {product:"CX Readiness Scorecard",price:"Free",note:"Top of funnel. Gates detail behind email."},
+  {product:"The Directness Penalty",price:"$47",note:"Gumroad. Ready. Verify 17yr before publish."},
+  {product:"The Real Offer",price:"$67",note:"Month 3–4 launch."},
+  {product:"Interview Prep Guide",price:"$197",note:"NEW — 'What Tier-1 Hiring Committees Actually Evaluate.'"},
+  {product:"CX Audit Playbook",price:"$147",note:"Phase 0 ready. Phases 1–8 pending recording."},
+  {product:"Team License",price:"$750/yr",note:"Month 3 Gumroad listing."},
+  {product:"Interview Coaching — Single",price:"$750",note:"NEW — 90 min. Resume + narrative + mock Q&A + debrief."},
+  {product:"Interview Coaching — Full Prep",price:"$2,500",note:"NEW — 3 sessions + async review + materials."},
+  {product:"Product Risk Brief",price:"$4,500",note:"5–7 days. Entry to consulting ladder."},
+  {product:"Revenue Leak Audit",price:"$12,000",note:"14 days fixed fee."},
+  {product:"Consumer Launch Advisory (30-day)",price:"$15–22K",note:"Available May 2026."},
+  {product:"AI Product Advisory",price:"$18–25K",note:"Any industry. Not FS-specific."},
+  {product:"Consumer Launch Advisory (60-day)",price:"$28–40K",note:"Full embedded."},
+  {product:"90-Day CX Sprint",price:"$35–50K",note:"50% upfront."},
+  {product:"Post-Sprint Retainer",price:"$12–15K/mo",note:"After Sprint close."},
+  {product:"Advisory Board — Cash",price:"$1.5–3K/mo",note:"After first Sprint."},
+  {product:"Advisory Board — Equity",price:"0.1–0.5%",note:"FAST Agreement. Attorney review required."},
+  {product:"CX Methodology License",price:"$2–75K/yr",note:"Year 2."},
+];
+
+const PENDING = [
+  {label:"Send within 48 hrs",text:"Avantos — Bassam Chaptini",sub:"Warmest lead. Morgan Stanley mobile/AI opener. $25M Feb 18.",u:"critical"},
+  {label:"Time-sensitive — now",text:"Lio — Vlad Keil",sub:"$30M a16z, March 5. US expansion. Window closing.",u:"critical"},
+  {label:"New — build this",text:"Interview Coaching — position, price, landing page",sub:"Guide $197 · Session $750 · Full Prep $2,500.",u:"action"},
+  {label:"Before last JPMC day",text:"Read non-compete + outside employment policy",sub:"",u:"action"},
+  {label:"Before last JPMC day",text:"Home office documentation — photo + door receipt",sub:"Section 179 door = $2,643.75 on top of base $8,878.12",u:"action"},
+  {label:"Before last JPMC day",text:"Book CPA consultation",sub:"",u:"action"},
+  {label:"Before last JPMC day",text:"Register domains + Google Workspace",sub:"giannaluppino.com + blairviewventures.com · ~$24 Namecheap",u:"action"},
+  {label:"Week 1 post-JPMC",text:"LinkedIn: notifications off → block → update",sub:"",u:"action"},
+  {label:"Week 1 post-JPMC",text:"Send 50-name network reactivation list",sub:"Morgan Stanley alumni = AI Advisory warm channel",u:"action"},
+  {label:"Week 1 post-JPMC",text:"Publish Directness Penalty — Gumroad $47",sub:"Confirm 17yr first",u:"action"},
+  {label:"Rebuild needed",text:"Services_SalesPages_Profiles.docx",sub:"Remove Her New Standard, update pricing, remove JPMC name, fix brand framing",u:"action"},
+  {label:"Year 2",text:"CX Methodology Licensing — first conversation Month 9–12",sub:"",u:"future"},
+];
+
+const S = {
+  app:{fontFamily:"Georgia, serif",background:C.sand,minHeight:"100vh",color:C.ink},
+  bar:{background:C.ink,padding:"0 28px",height:50,display:"flex",alignItems:"center",justifyContent:"space-between"},
+  brandT:{fontFamily:"Arial, sans-serif",fontSize:10,letterSpacing:".2em",textTransform:"uppercase",color:"rgba(244,240,230,.5)"},
+  dateT:{fontFamily:"Arial, sans-serif",fontSize:10,color:"rgba(244,240,230,.28)"},
+  hero:{background:C.forest,padding:"32px 28px 28px",borderBottom:`3px solid ${C.forestMid}`},
+  h1:{fontSize:26,color:C.sand,fontWeight:400,letterSpacing:"-.01em",marginBottom:4},
+  heroSub:{fontFamily:"Arial, sans-serif",fontSize:11,color:"rgba(244,240,230,.55)",marginBottom:20,letterSpacing:".04em"},
+  statRow:{display:"flex",gap:2,flexWrap:"wrap"},
+  statBox:{background:"rgba(255,255,255,.07)",padding:"11px 16px",minWidth:100},
+  statN:{fontSize:20,color:C.sand,fontWeight:300,lineHeight:1},
+  statL:{fontFamily:"Arial, sans-serif",fontSize:9,letterSpacing:".12em",textTransform:"uppercase",color:"rgba(244,240,230,.35)",marginTop:3},
+  nav:{background:C.sandM,borderBottom:"1px solid rgba(17,17,17,.08)",padding:"0 28px",display:"flex",overflowX:"auto"},
+  tab:(a)=>({padding:"12px 14px",fontFamily:"Arial, sans-serif",fontSize:10,letterSpacing:".1em",textTransform:"uppercase",fontWeight:600,cursor:"pointer",border:"none",background:"none",color:a?C.ink:"rgba(17,17,17,.35)",borderBottom:a?`2px solid ${C.forest}`:"2px solid transparent",whiteSpace:"nowrap"}),
+  main:{padding:24,maxWidth:1180,margin:"0 auto"},
+  sl:{fontFamily:"Arial, sans-serif",fontSize:10,letterSpacing:".2em",textTransform:"uppercase",color:C.muted,fontWeight:700,marginBottom:12},
+  card:(bg,bl)=>({background:bg||C.white,border:"1px solid rgba(17,17,17,.08)",padding:"17px 19px",marginBottom:2,...(bl?{borderLeft:`4px solid ${bl}`}:{})}),
+  grid2:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(265px,1fr))",gap:2},
+  grid3:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(210px,1fr))",gap:2},
+  badge:(fg,bg)=>({display:"inline-block",padding:"2px 7px",fontFamily:"Arial, sans-serif",fontSize:9,letterSpacing:".1em",textTransform:"uppercase",fontWeight:700,borderRadius:2,background:bg,color:fg}),
+  btn:(bg,sm)=>({background:bg||C.forest,color:C.sand,border:"none",padding:sm?"7px 13px":"9px 18px",fontFamily:"Arial, sans-serif",fontSize:sm?10:11,letterSpacing:".1em",textTransform:"uppercase",cursor:"pointer",fontWeight:600,borderRadius:2}),
+  code:{background:C.ink,padding:"16px 20px",fontFamily:"'Courier New', monospace",fontSize:11,color:"rgba(244,240,230,.82)",lineHeight:1.7,whiteSpace:"pre-wrap",borderLeft:`3px solid ${C.forest}`,marginBottom:6},
+  th:{background:C.ink,color:C.sand,fontFamily:"Arial, sans-serif",fontSize:9,letterSpacing:".12em",textTransform:"uppercase",padding:"9px 13px",textAlign:"left"},
+  td:{padding:"9px 13px",borderBottom:"1px solid rgba(17,17,17,.05)",fontSize:13},
+  divider:{height:1,background:"rgba(17,17,17,.07)",margin:"20px 0"},
+  warningBar:{background:"#2A0A0A",borderBottom:`1px solid ${C.red}`,padding:"10px 28px",fontFamily:"Arial, sans-serif",fontSize:11,color:"#F4A0A0",letterSpacing:".04em"},
+};
+
+function Hub() {
+  const [tab, setTab] = React.useState("overview");
+  const [copied, setCopied] = React.useState(false);
+
+  const copy = () => {
+    navigator.clipboard.writeText(CHAT_STARTER).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2200);
+    });
+  };
+
+  const tabs = [
+    ["overview","Overview"],
+    ["arms","Revenue Arms"],
+    ["ladder","Value Ladder"],
+    ["pending","Pending"],
+    ["starter","Chat Starter"],
+  ];
+
+  return (
+    <div style={S.app}>
+      {/* Top bar */}
+      <div style={S.bar}>
+        <div style={S.brandT}>Blairview Ventures — Session Hub v5</div>
+        <div style={S.dateT}>Updated: March 9, 2026</div>
+      </div>
+
+      {/* Brand warning */}
+      <div style={S.warningBar}>
+        ⚠ Brand v5 — NOT financial services. Identity: consumer experience excellence at scale. Products used by hundreds of millions.
+      </div>
+
+      {/* Hero */}
+      <div style={S.hero}>
+        <div style={S.h1}>Blairview Ventures</div>
+        <div style={S.heroSub}>Gianna Luppino · Armonk, NY · Consumer-facing digital experience builder · Launch May 2026</div>
+        <div style={S.statRow}>
+          {[["48 Files","All Files"],["10","Revenue Arms"],["6","Leads"],["May '26","Launch"],["$446K+","Year 2 Floor"],["100M+","Users Reached"]].map(([n,l]) => (
+            <div key={l} style={S.statBox}>
+              <div style={S.statN}>{n}</div>
+              <div style={S.statL}>{l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Nav */}
+      <div style={S.nav}>
+        {tabs.map(([id,label]) => (
+          <button key={id} style={S.tab(tab===id)} onClick={() => setTab(id)}>{label}</button>
+        ))}
+      </div>
+
+      <div style={S.main}>
+
+        {/* OVERVIEW */}
+        {tab==="overview" && (
+          <div>
+            <div style={{...S.card("#1A0A0A"), borderLeft:`4px solid ${C.red}`, marginBottom:16}}>
+              <div style={{fontFamily:"Arial, sans-serif",fontSize:10,letterSpacing:".16em",textTransform:"uppercase",color:C.red,marginBottom:8,fontWeight:700}}>Brand Correction — v5</div>
+              <div style={{fontSize:12,color:"rgba(244,240,230,.75)",lineHeight:1.65,whiteSpace:"pre-line",fontFamily:"Arial, sans-serif"}}>{BRAND_CORRECTION}</div>
+            </div>
+
+            <div style={S.divider}/>
+            <div style={S.sl}>Locked Decisions</div>
+            <div style={S.grid3}>
+              {LOCKED.map(l => (
+                <div key={l.key} style={{...S.card(C.ink), borderLeft:`2px solid ${C.forest}`}}>
+                  <div style={{fontFamily:"Arial, sans-serif",fontSize:9,letterSpacing:".12em",textTransform:"uppercase",color:C.muted,marginBottom:4}}>{l.key}</div>
+                  <div style={{fontSize:12,fontWeight:600,color:"rgba(244,240,230,.9)",marginBottom:l.sub?4:0}}>{l.val}</div>
+                  {l.sub && <div style={{fontSize:11,color:"rgba(244,240,230,.42)",lineHeight:1.4}}>{l.sub}</div>}
+                </div>
+              ))}
+            </div>
+
+            <div style={S.divider}/>
+            <div style={S.sl}>Tax Math</div>
+            <div style={S.card(C.sandM)}>
+              <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))",gap:14}}>
+                {[["W2 Net Target","~$246,800"],["Gross Needed","~$390–400K"],["Year 1 Gross","$65–85K"],["Year 2 Floor","$446K"],["Year 2 Net","~$210–220K"],["Home Office","$11,521.87"]].map(([l,v]) => (
+                  <div key={l}>
+                    <div style={{fontFamily:"Arial, sans-serif",fontSize:9,letterSpacing:".1em",textTransform:"uppercase",color:C.muted,marginBottom:3}}>{l}</div>
+                    <div style={{fontSize:14,fontWeight:600,color:C.forest}}>{v}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ARMS */}
+        {tab==="arms" && (
+          <div>
+            <div style={S.sl}>10 Revenue Arms</div>
+            <div style={S.grid2}>
+              {ARMS.map(arm => (
+                <div key={arm.n} style={{...S.card(arm.label.includes("Interview")||arm.label.includes("AI")?C.blueBg:C.white), borderTop:`3px solid ${arm.color}`}}>
+                  <div style={{display:"flex",justifyContent:"space-between",marginBottom:6}}>
+                    <span style={{fontFamily:"Arial, sans-serif",fontSize:9,color:C.muted,letterSpacing:".1em"}}>ARM {arm.n}</span>
+                    <span style={S.badge(C.muted,"rgba(17,17,17,.07)")}>{arm.timing}</span>
+                  </div>
+                  <div style={{fontSize:14,fontWeight:600,color:C.ink,marginBottom:5}}>{arm.label}</div>
+                  <div style={{fontSize:12,color:"rgba(17,17,17,.55)",lineHeight:1.55}}>{arm.detail}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* VALUE LADDER */}
+        {tab==="ladder" && (
+          <div>
+            <div style={S.sl}>Complete Value Ladder — 18 products & services</div>
+            <div style={{overflowX:"auto"}}>
+              <table style={{width:"100%",borderCollapse:"collapse",background:C.white}}>
+                <thead>
+                  <tr>
+                    <th style={S.th}>Product / Service</th>
+                    <th style={S.th}>Price</th>
+                    <th style={S.th}>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {VALUE_LADDER.map((r,i) => (
+                    <tr key={r.product} style={{background:i%2===0?C.white:C.sandM}}>
+                      <td style={{...S.td, fontWeight:r.product.includes("Interview")?"600":"400", color:r.product.includes("Interview")?C.blue:C.ink}}>
+                        {r.product.includes("Interview") && <span style={{...S.badge(C.blue,C.blueBg),marginRight:7}}>New</span>}
+                        {r.product}
+                      </td>
+                      <td style={{...S.td,fontFamily:"Arial, sans-serif",fontWeight:700,color:C.forest,fontSize:12}}>{r.price}</td>
+                      <td style={{...S.td,fontSize:12,color:"rgba(17,17,17,.5)"}}>{r.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* PENDING */}
+        {tab==="pending" && (
+          <div>
+            <div style={S.sl}>Pending Operator Actions</div>
+            <div style={S.grid2}>
+              {PENDING.map((p,i) => (
+                <div key={i} style={{...S.card(C.white), borderLeft:`3px solid ${p.u==="critical"?C.red:p.u==="action"?C.amber:"rgba(17,17,17,.12)"}`}}>
+                  <div style={{fontFamily:"Arial, sans-serif",fontSize:9,letterSpacing:".12em",textTransform:"uppercase",color:p.u==="critical"?C.red:p.u==="action"?C.amber:"rgba(17,17,17,.28)",fontWeight:700,marginBottom:4}}>{p.label}</div>
+                  <div style={{fontSize:13,fontWeight:600,color:C.ink,marginBottom:p.sub?3:0}}>{p.text}</div>
+                  {p.sub && <div style={{fontSize:11,color:"rgba(17,17,17,.45)",lineHeight:1.4}}>{p.sub}</div>}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* CHAT STARTER */}
+        {tab==="starter" && (
+          <div>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14}}>
+              <div style={S.sl}>New Chat Starter — Copy & Paste</div>
+              <button style={S.btn(copied?C.muted:C.forest,true)} onClick={copy}>
+                {copied ? "Copied!" : "Copy to Clipboard"}
+              </button>
+            </div>
+            <div style={S.code}>{CHAT_STARTER}</div>
+            <div style={{...S.card(C.sandM), padding:"16px 20px", borderLeft:`3px solid ${C.forest}`}}>
+              <div style={{fontFamily:"Arial, sans-serif",fontSize:10,letterSpacing:".14em",textTransform:"uppercase",color:C.muted,fontWeight:700,marginBottom:10}}>Three ways to start a new session</div>
+              <div style={{fontSize:13,color:"rgba(17,17,17,.65)",lineHeight:1.7}}>
+                <strong>A — Fastest (10 seconds):</strong> Hit "Copy to Clipboard" above and paste as your first message in any new Claude chat.<br/><br/>
+                <strong>B — Most complete:</strong> Attach USER_md_Gianna_Luppino.md via the paperclip icon. Say: "Read this for full context."<br/><br/>
+                <strong>C — Always current:</strong> Share this URL with Claude: <strong>https://blairviewventures.github.io/blairview-hub/</strong> and say "Read my hub for context before we begin."
+              </div>
+            </div>
+
+            <div style={{...S.card(C.sandM),marginTop:2,padding:"16px 20px",borderLeft:`3px solid ${C.amber}`}}>
+              <div style={{fontFamily:"Arial, sans-serif",fontSize:10,letterSpacing:".14em",textTransform:"uppercase",color:C.amber,fontWeight:700,marginBottom:8}}>Updating this hub</div>
+              <div style={{fontSize:13,color:"rgba(17,17,17,.65)",lineHeight:1.7}}>
+                At the end of any Claude session, say: <em>"Update the hub HTML and USER.md with everything we decided today."</em><br/>
+                Download the new index.html → go to github.com/blairviewventures/blairview-hub → click index.html → pencil icon → select all → paste → Commit. Live in 2 minutes.
+              </div>
+            </div>
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Hub />);
+</script>
+</body>
+</html>
