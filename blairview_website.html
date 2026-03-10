@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>Blairview Ventures — Consumer Experience Practice</title>
+<meta name="description" content="Fractional CPO and consumer experience consulting. 17 years building digital products used by hundreds of millions of people.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #111111;
+  --forest: #1C3829;
+  --forest-mid: #2D5A3D;
+  --muted: #5A7A5C;
+  --sand: #F4F0E6;
+  --sand-m: #EDE8DC;
+  --white: #FDFCF9;
+  --nav-h: 60px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--sand);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+button, input, select, textarea { font-family: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(17,17,17,.97);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 52px;
+  border-bottom: 1px solid rgba(244,240,230,.06);
+}
+.nav-brand { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--sand); text-decoration: none; font-weight: 400; }
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: rgba(244,240,230,.42); text-decoration: none; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: rgba(244,240,230,.82); }
+.nav-cta { color: var(--sand) !important; background: var(--forest); padding: 9px 18px !important; transition: background .2s !important; }
+.nav-cta:hover { background: var(--forest-mid) !important; }
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; background: none; border: none; cursor: pointer; padding: 10px; align-items: center; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: rgba(244,240,230,.7); transition: transform .25s, opacity .25s; transform-origin: center; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: rgba(17,17,17,.98); z-index: 199; padding: 24px 24px 32px; border-bottom: 1px solid rgba(244,240,230,.08); }
+.mobile-menu.open { display: flex; flex-direction: column; }
+.mobile-menu a { display: block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: rgba(244,240,230,.5); text-decoration: none; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(244,240,230,.06); transition: color .2s; }
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--sand); }
+.mob-cta { margin-top: 14px; background: var(--forest); color: var(--sand) !important; text-align: center; padding: 14px !important; border-bottom: none !important; font-weight: 600 !important; font-size: 10px !important; letter-spacing: .18em; }
+
+/* HERO */
+.hero {
+  min-height: 100vh; min-height: 100svh;
+  background: var(--ink);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: calc(var(--nav-h) + 48px) 52px 64px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 12% 72%, rgba(28,56,41,.3) 0%, transparent 52%),
+              radial-gradient(ellipse at 82% 18%, rgba(28,56,41,.1) 0%, transparent 46%);
+  pointer-events: none;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 24px; }
+.hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(34px, 5.2vw, 78px); color: var(--sand); font-weight: 400; line-height: 1.07; letter-spacing: -.025em; margin-bottom: 28px; max-width: 780px; }
+.hero-headline em { font-style: italic; color: rgba(244,240,230,.38); }
+.hero-credentials { display: flex; flex-direction: column; gap: 7px; margin-bottom: 40px; max-width: 560px; }
+.hero-credential { font-size: 14px; color: rgba(244,240,230,.44); line-height: 1.6; font-weight: 300; }
+.hero-credential strong { color: rgba(244,240,230,.78); font-weight: 400; }
+.hero-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--forest); color: var(--sand); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; padding: 15px 32px; min-height: 48px; text-decoration: none; border: none; cursor: pointer; transition: background .2s; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.btn-primary:hover { background: var(--forest-mid); }
+.btn-ghost { display: inline-flex; align-items: center; color: rgba(244,240,230,.36); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid rgba(244,240,230,.13); transition: color .2s, border-color .2s; min-height: 44px; }
+.btn-ghost:hover { color: rgba(244,240,230,.62); border-color: rgba(244,240,230,.32); }
+
+/* SECTION BASE — tighter, consistent padding */
+.section { padding: 64px 52px; }
+.section-alt { background: var(--white); }
+.section-dark { background: var(--ink); }
+.section-mid { background: var(--sand-m); }
+
+.section-eyebrow { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 14px; }
+.section-headline { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.6vw, 38px); color: var(--ink); font-weight: 400; line-height: 1.2; letter-spacing: -.02em; max-width: 600px; margin-bottom: 18px; }
+.section-body { font-size: 14px; color: rgba(17,17,17,.57); line-height: 1.82; max-width: 580px; font-weight: 300; }
+.section-body strong { color: var(--ink); font-weight: 500; }
+
+/* DIAGNOSTIC — two col */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 40px; align-items: start; }
+
+.trigger-list { list-style: none; margin-top: 24px; }
+.trigger-item { display: flex; align-items: flex-start; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(17,17,17,.07); }
+.trigger-item:first-child { border-top: 1px solid rgba(17,17,17,.07); }
+.trigger-n { font-family: 'Playfair Display', serif; font-size: 11px; color: rgba(17,17,17,.18); flex-shrink: 0; padding-top: 2px; min-width: 18px; }
+.trigger-text { font-size: 13px; color: rgba(17,17,17,.6); line-height: 1.55; font-weight: 300; }
+
+.pullquote { padding: 26px 30px; background: var(--forest); position: relative; margin-bottom: 2px; }
+.pullquote::before { content: '\201C'; position: absolute; top: 10px; left: 20px; font-family: 'Playfair Display', serif; font-size: 52px; color: rgba(244,240,230,.08); line-height: 1; }
+.pullquote-text { font-family: 'Playfair Display', serif; font-size: clamp(14px, 1.5vw, 17px); color: var(--sand); font-weight: 400; line-height: 1.55; font-style: italic; margin-bottom: 14px; }
+.pullquote-attr { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: rgba(244,240,230,.28); font-weight: 500; }
+
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid rgba(17,17,17,.08); margin-top: 2px; }
+.stat { padding: 18px 16px; border-right: 1px solid rgba(17,17,17,.08); background: var(--white); }
+.stat:last-child { border-right: none; }
+.stat-n { font-family: 'Playfair Display', serif; font-size: clamp(20px, 2.2vw, 30px); color: var(--ink); font-weight: 400; line-height: 1; margin-bottom: 5px; }
+.stat-l { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+/* thin rule between sections that share the same bg */
+.rule { height: 1px; background: rgba(17,17,17,.08); margin: 0 52px; }
+
+/* PRACTICE — timeline */
+.timeline { margin-top: 40px; border-left: 2px solid rgba(17,17,17,.08); padding-left: 36px; margin-left: 10px; }
+.tl-item { position: relative; padding-bottom: 36px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before { content: ''; position: absolute; left: -45px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--forest); border: 2px solid var(--sand); box-shadow: 0 0 0 2px var(--forest); }
+.tl-period { font-size: 9px; letter-spacing: .17em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 5px; }
+.tl-context { font-family: 'Playfair Display', serif; font-size: clamp(16px, 1.7vw, 19px); color: var(--ink); font-weight: 400; margin-bottom: 7px; }
+.tl-body { font-size: 13px; color: rgba(17,17,17,.48); line-height: 1.68; max-width: 500px; font-weight: 300; }
+
+/* ENGAGEMENTS */
+.engagement-grid { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(244,240,230,.05); }
+.engagement-card { background: var(--ink); padding: 32px 36px; transition: background .2s; display: flex; flex-direction: column; }
+.engagement-card:hover { background: rgba(28,56,41,.18); }
+.engagement-card.featured { background: var(--forest); grid-column: 1 / -1; }
+.engagement-card.featured:hover { background: var(--forest-mid); }
+.featured-flag { display: inline-block; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: rgba(244,240,230,.45); border: 1px solid rgba(244,240,230,.18); padding: 4px 10px; margin-bottom: 16px; width: fit-content; }
+.engagement-n { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: rgba(244,240,230,.2); font-weight: 600; margin-bottom: 10px; }
+.engagement-title { font-family: 'Playfair Display', serif; font-size: clamp(17px, 1.8vw, 21px); color: var(--sand); font-weight: 400; letter-spacing: -.01em; margin-bottom: 10px; line-height: 1.25; }
+.featured .engagement-title { font-size: clamp(19px, 2.2vw, 26px); max-width: 500px; }
+.engagement-body { font-size: 13px; color: rgba(244,240,230,.38); line-height: 1.72; font-weight: 300; margin-bottom: 16px; flex: 1; }
+.featured .engagement-body { color: rgba(244,240,230,.52); max-width: 620px; }
+.engagement-duration { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: rgba(244,240,230,.26); font-weight: 500; border-top: 1px solid rgba(244,240,230,.08); padding-top: 12px; }
+.featured .engagement-duration { color: rgba(244,240,230,.42); border-color: rgba(244,240,230,.14); }
+
+/* SCORECARD — compact strip, not a full section */
+.scorecard-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.scorecard-meta { display: flex; border: 1px solid rgba(17,17,17,.1); margin-top: 28px; }
+.scorecard-meta-item { flex: 1; padding: 16px 18px; border-right: 1px solid rgba(17,17,17,.1); background: var(--white); }
+.scorecard-meta-item:last-child { border-right: none; }
+.sm-n { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--ink); font-weight: 400; margin-bottom: 3px; }
+.sm-l { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.scorecard-preview { background: var(--white); border: 1px solid rgba(17,17,17,.08); padding: 26px 28px; }
+.sp-label { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 20px; }
+.sp-bar-group { display: flex; flex-direction: column; gap: 13px; margin-bottom: 20px; }
+.sp-bar-label { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.sp-bar-name { font-size: 11px; letter-spacing: .04em; color: rgba(17,17,17,.55); font-weight: 400; }
+.sp-bar-score { font-family: 'Playfair Display', serif; font-size: 12px; color: var(--ink); }
+.sp-bar-track { height: 2px; background: rgba(17,17,17,.08); }
+.sp-bar-fill { height: 100%; background: var(--forest); }
+.sp-caption { font-size: 11px; color: rgba(17,17,17,.36); line-height: 1.62; font-style: italic; border-top: 1px solid rgba(17,17,17,.07); padding-top: 16px; }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; margin-top: 40px; }
+.contact-meta-item { margin-bottom: 20px; }
+.contact-meta-label { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 5px; }
+.contact-meta-value { font-size: 14px; color: rgba(17,17,17,.7); font-weight: 300; }
+.contact-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(17,17,17,.08); font-size: 13px; color: rgba(17,17,17,.36); line-height: 1.68; font-style: italic; }
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 7px; }
+.form-input, .form-select, .form-textarea { width: 100%; background: var(--sand); border: 1px solid rgba(17,17,17,.12); color: var(--ink); font-size: 16px; font-weight: 300; padding: 12px 14px; min-height: 46px; outline: none; transition: border-color .2s; -webkit-appearance: none; appearance: none; border-radius: 0; }
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--forest); }
+.form-textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+.form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A7A5C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px; cursor: pointer; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.btn-submit { display: flex; align-items: center; justify-content: center; width: 100%; background: var(--ink); color: var(--sand); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; padding: 16px; min-height: 50px; border: none; cursor: pointer; transition: background .2s; margin-top: 6px; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.btn-submit:hover { background: var(--forest); }
+.form-footnote { font-size: 11px; color: rgba(17,17,17,.3); text-align: center; margin-top: 10px; line-height: 1.55; }
+
+/* FOOTER */
+footer { background: var(--ink); padding: 26px 52px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; border-top: 1px solid rgba(244,240,230,.05); }
+.footer-brand { font-family: 'Playfair Display', serif; font-size: 13px; color: rgba(244,240,230,.35); }
+.footer-links { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; }
+.footer-links a { font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: rgba(244,240,230,.2); text-decoration: none; font-weight: 500; transition: color .2s; }
+.footer-links a:hover { color: rgba(244,240,230,.5); }
+.footer-copy { font-size: 9px; letter-spacing: .07em; color: rgba(244,240,230,.16); }
+
+/* RESPONSIVE — tablet */
+@media (max-width: 1024px) {
+  nav { padding: 0 32px; }
+  .hero { padding: calc(var(--nav-h) + 40px) 40px 56px; }
+  .section { padding: 56px 40px; }
+  .rule { margin: 0 40px; }
+  footer { padding: 24px 40px; }
+}
+
+/* RESPONSIVE — 768px */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .hero { padding: calc(var(--nav-h) + 32px) 24px 48px; }
+  .hero-headline { font-size: clamp(30px, 8vw, 48px); }
+  .hero-credential { font-size: 13px; }
+  .btn-primary { width: 100%; }
+  .btn-ghost { display: none; }
+  .section { padding: 52px 24px; }
+  .rule { margin: 0 24px; }
+  .two-col { grid-template-columns: 1fr; gap: 40px; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3) { border-top: 1px solid rgba(17,17,17,.08); border-right: 1px solid rgba(17,17,17,.08); }
+  .stat:nth-child(4) { border-top: 1px solid rgba(17,17,17,.08); }
+  .engagement-grid { grid-template-columns: 1fr; }
+  .engagement-card.featured { grid-column: 1; }
+  .engagement-card { padding: 28px 24px; }
+  .scorecard-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { padding: 22px 20px; flex-direction: column; text-align: center; gap: 10px; }
+  .footer-links { justify-content: center; }
+}
+
+/* RESPONSIVE — 480px */
+@media (max-width: 480px) {
+  :root { --nav-h: 56px; }
+  nav { padding: 0 16px; }
+  .hero { padding: calc(var(--nav-h) + 28px) 20px 44px; }
+  .section { padding: 44px 20px; }
+  .rule { margin: 0 20px; }
+  .pullquote { padding: 22px 22px; }
+  .timeline { padding-left: 28px; margin-left: 8px; }
+  .tl-item::before { left: -37px; }
+  .engagement-card { padding: 24px 18px; }
+  .scorecard-preview { padding: 22px 18px; }
+}
+
+@supports (padding: max(0px)) {
+  nav { padding-left: max(52px, env(safe-area-inset-left)); padding-right: max(52px, env(safe-area-inset-right)); }
+  footer { padding-bottom: max(26px, env(safe-area-inset-bottom)); }
+  @media (max-width: 768px) {
+    nav { padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
+  }
+  @media (max-width: 480px) {
+    nav { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#top" class="nav-brand">Blairview Ventures</a>
+  <ul class="nav-links">
+    <li><a href="#diagnostic">Diagnostic</a></li>
+    <li><a href="#practice">Practice</a></li>
+    <li><a href="#engagements">Engagements</a></li>
+    <li><a href="#contact" class="nav-cta">Start a Conversation</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#diagnostic" onclick="closeMenu()">Diagnostic</a>
+  <a href="#practice" onclick="closeMenu()">Practice</a>
+  <a href="#engagements" onclick="closeMenu()">Engagements</a>
+  <a href="#scorecard" onclick="closeMenu()">Scorecard</a>
+  <a href="#contact" class="mob-cta" onclick="closeMenu()">Start a Conversation</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <p class="hero-eyebrow">Consumer Experience Practice &nbsp;&middot;&nbsp; Blairview Ventures</p>
+  <h1 class="hero-headline">Some products become<br><em>indispensable.</em><br>That doesn't happen by accident.</h1>
+  <div class="hero-credentials">
+    <p class="hero-credential"><strong>HBO GO across 11 platforms</strong> before streaming had a category name.</p>
+    <p class="hero-credential"><strong>Loyalty mechanics inside Uber</strong> before embedded finance existed as a discipline.</p>
+    <p class="hero-credential"><strong>Consumer payments product at scale</strong> for millions of daily active users.</p>
+  </div>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Describe Your Problem</a>
+    <a href="#diagnostic" class="btn-ghost">About the Practice</a>
+  </div>
+</section>
+
+<!-- DIAGNOSTIC -->
+<section class="section section-alt" id="diagnostic">
+  <p class="section-eyebrow">The Diagnostic</p>
+  <div class="two-col">
+    <div>
+      <h2 class="section-headline">Every team has a theory. Almost none of them are right.</h2>
+      <p class="section-body">The experience gap is the distance between what a team believes they shipped and what a user actually encounters. It compounds quietly — in churn, in NPS, in growth that stalls without a clear cause.<br><br><strong>That gap is diagnosable.</strong> Not with a framework applied generically, but with specific, evidence-based findings about what is actually happening in your product.</p>
+      <ul class="trigger-list">
+        <li class="trigger-item"><span class="trigger-n">01</span><span class="trigger-text">Retention metrics that don't respond to product changes</span></li>
+        <li class="trigger-item"><span class="trigger-n">02</span><span class="trigger-text">A launch that underperformed and produced no consensus on why</span></li>
+        <li class="trigger-item"><span class="trigger-n">03</span><span class="trigger-text">A second product surface quietly eroding trust in the first</span></li>
+        <li class="trigger-item"><span class="trigger-n">04</span><span class="trigger-text">An AI feature with adoption numbers that don't match internal confidence</span></li>
+        <li class="trigger-item"><span class="trigger-n">05</span><span class="trigger-text">A product-market fit narrative that diverges from what users actually do</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="pullquote">
+        <p class="pullquote-text">The moment users cross from useful to indispensable is specific, fragile, and almost always invisible to the team that built it.</p>
+        <p class="pullquote-attr">Gianna Luppino &nbsp;&middot;&nbsp; Blairview Ventures</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-n">17+</div><div class="stat-l">Years in consumer product</div></div>
+        <div class="stat"><div class="stat-n">100M+</div><div class="stat-l">Users reached</div></div>
+        <div class="stat"><div class="stat-n">11</div><div class="stat-l">Platforms, HBO GO</div></div>
+        <div class="stat"><div class="stat-n">4</div><div class="stat-l">Industries built across</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- thin rule — same bg, no visual jump -->
+<div class="rule"></div>
+
+<!-- PRACTICE -->
+<section class="section section-alt" id="practice">
+  <p class="section-eyebrow">The Practice</p>
+  <h2 class="section-headline">17 years. Any industry. The credential is scale of consumer impact.</h2>
+  <p class="section-body">The skills that made HBO GO a product people loved before streaming had a roadmap are the same skills that close a retention gap at a Series B company. The vertical changes. The consumer experience problem doesn't.<br><br>Financial services is one vertical this practice has crossed. <strong>Consumer-facing product excellence is the discipline — and it transfers to any company building something real users need to love.</strong></p>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-period">2011 — 2013 &nbsp;&middot;&nbsp; Entertainment</div>
+      <div class="tl-context">HBO GO across 11 platforms</div>
+      <div class="tl-body">Zero to one. Web, iPad, Xbox, Samsung Smart TVs, Roku, Kindle Fire, Android, iPhone, PS3, HTML5, Apple TV. Emmy-nominated Interactive Features. No streaming playbook existed.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2013 — 2018 &nbsp;&middot;&nbsp; Commerce &amp; Loyalty</div>
+      <div class="tl-context">Pay with Membership Rewards inside Uber</div>
+      <div class="tl-body">Embedded loyalty mechanics in a consumer product used by hundreds of millions before embedded finance was a recognized category.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2018 — 2024 &nbsp;&middot;&nbsp; AI &amp; Wealth</div>
+      <div class="tl-context">First GenAI advisor platform, Morgan Stanley</div>
+      <div class="tl-body">Production system. Proprietary OpenAI relationship. Full mobile redesign from ideation through launch. Designed for advisor UX and scoped for external productization.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2024 — 2026 &nbsp;&middot;&nbsp; Payments</div>
+      <div class="tl-context">Consumer payments product, major US financial institution</div>
+      <div class="tl-body">Enterprise-scale consumer product ownership. Millions of daily active users. End-to-end accountability for a product people use without thinking twice about.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section class="section section-dark" id="engagements">
+  <p class="section-eyebrow" style="color:var(--muted)">Engagements</p>
+  <h2 class="section-headline">Every engagement begins with a diagnosis. Not an assumption.</h2>
+  <p class="section-body">The right structure depends on where the problem sits and how much runway exists to address it. The conversation that determines fit comes before any scope is discussed.</p>
+  <div class="engagement-grid">
+    <div class="engagement-card featured">
+      <div class="featured-flag">Most Differentiated Offering</div>
+      <div class="engagement-n">04 of 06</div>
+      <div class="engagement-title">Consumer Launch Advisory</div>
+      <div class="engagement-body">HBO GO launched before streaming had a definition. Pay with Membership Rewards launched inside Uber before embedded finance was a category. The first major consumer product launch is different from everything that came before it — the failure modes are different, the window to establish user trust is narrow, and there is no comparable to benchmark against. This advisory is built from that direct experience.</div>
+      <div class="engagement-duration">30-day or 60-day embedded &nbsp;&middot;&nbsp; Pricing upon contact</div>
+    </div>
+    <div class="engagement-card">
+      <div class="engagement-n">01 of 06</div>
+      <div class="engagement-title">Product Risk Brief</div>
+      <div class="engagement-body">A focused engagement identifying the top experience risks in your product before they become revenue problems. Specific findings. No generalities.</div>
+      <div class="engagement-duration">5 to 7 days &nbsp;&middot;&nbsp; Pricing upon contact</div>
+    </div>
+    <div class="engagement-card">
+      <div class="engagement-n">02 of 06</div>
+      <div class="engagement-title">Revenue Leak Audit</div>
+      <div class="engagement-body">Front-to-back audit of where the consumer experience is actively costing revenue. Deliverable: a prioritized roadmap with financial impact attached to each finding.</div>
+      <div class="engagement-duration">14 days &nbsp;&middot;&nbsp; Pricing upon contact</div>
+    </div>
+    <div class="engagement-card">
+      <div class="engagement-n">03 of 06</div>
+      <div class="engagement-title">90-Day CX Sprint</div>
+      <div class="engagement-body">Full embedded engagement — audit, roadmap, prioritization, and execution support. No discovery phase. No orientation time. Execution from day one.</div>
+      <div class="engagement-duration">90 days &nbsp;&middot;&nbsp; Pricing upon contact</div>
+    </div>
+    <div class="engagement-card">
+      <div class="engagement-n">05 of 06</div>
+      <div class="engagement-title">AI Product Advisory</div>
+      <div class="engagement-body">For any company building an AI-powered user-facing product. The trust, adoption, and experience architecture problems are consistent across industries. The credential here is a production system, not a pilot.</div>
+      <div class="engagement-duration">30 days &nbsp;&middot;&nbsp; Pricing upon contact</div>
+    </div>
+    <div class="engagement-card">
+      <div class="engagement-n">06 of 06</div>
+      <div class="engagement-title">Interview Coaching</div>
+      <div class="engagement-body">For senior product managers pursuing VP, CPO, or Director roles at tier-one companies. Built from direct experience evaluating candidates at that level.</div>
+      <div class="engagement-duration">Guide &nbsp;&middot;&nbsp; Single Session &nbsp;&middot;&nbsp; Full Prep</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORECARD -->
+<section class="section section-mid" id="scorecard">
+  <div class="scorecard-wrap">
+    <div>
+      <p class="section-eyebrow">Free Diagnostic Tool</p>
+      <h2 class="section-headline">The CX Readiness Scorecard</h2>
+      <p class="section-body">Fifteen questions across four areas. The output is a score, a benchmark, and the three areas most likely generating silent revenue loss right now. No call required.</p>
+      <div class="scorecard-meta">
+        <div class="scorecard-meta-item"><div class="sm-n">15</div><div class="sm-l">Questions</div></div>
+        <div class="scorecard-meta-item"><div class="sm-n">5 min</div><div class="sm-l">To complete</div></div>
+        <div class="scorecard-meta-item"><div class="sm-n">Free</div><div class="sm-l">No call required</div></div>
+      </div>
+      <a href="https://blairviewventures.github.io/blairview-hub/scorecard.html" class="btn-primary" style="margin-top:24px">Begin the Scorecard</a>
+    </div>
+    <div>
+      <div class="scorecard-preview">
+        <p class="sp-label">Sample output — diagnostic area scores</p>
+        <div class="sp-bar-group">
+          <div><div class="sp-bar-label"><span class="sp-bar-name">Consumer Experience</span><span class="sp-bar-score">72</span></div><div class="sp-bar-track"><div class="sp-bar-fill" style="width:72%"></div></div></div>
+          <div><div class="sp-bar-label"><span class="sp-bar-name">Organizational Structure</span><span class="sp-bar-score">48</span></div><div class="sp-bar-track"><div class="sp-bar-fill" style="width:48%"></div></div></div>
+          <div><div class="sp-bar-label"><span class="sp-bar-name">Business &amp; Tech Alignment</span><span class="sp-bar-score">61</span></div><div class="sp-bar-track"><div class="sp-bar-fill" style="width:61%"></div></div></div>
+          <div><div class="sp-bar-label"><span class="sp-bar-name">Internal Strategy &amp; Comms</span><span class="sp-bar-score">34</span></div><div class="sp-bar-track"><div class="sp-bar-fill" style="width:34%"></div></div></div>
+        </div>
+        <p class="sp-caption">A score of 34 in Internal Strategy &amp; Communication means strategy shifts are reaching the product team unevenly or as rumors — not decisions. That disconnect is almost always visible in the consumer experience within 60 days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-alt" id="contact">
+  <p class="section-eyebrow">Start a Conversation</p>
+  <h2 class="section-headline">Describe the problem. A substantive response follows.</h2>
+  <div class="contact-grid">
+    <div>
+      <p class="section-body">Every submission is read directly. When there is a fit, the response arrives within two business days — and it contains a specific observation about what has been described, not a capabilities overview.</p>
+      <div style="margin-top:28px">
+        <div class="contact-meta-item">
+          <div class="contact-meta-label">Location</div>
+          <div class="contact-meta-value">Armonk, New York</div>
+        </div>
+        <div class="contact-meta-item">
+          <div class="contact-meta-label">Email</div>
+          <div class="contact-meta-value">gianna@blairviewventures.com</div>
+        </div>
+      </div>
+      <p class="contact-note">No need to have the problem fully diagnosed before reaching out. That is the work.</p>
+    </div>
+    <div>
+      <form onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" placeholder="Your name" autocomplete="name"></div>
+          <div class="form-group"><label class="form-label">Company</label><input type="text" class="form-input" placeholder="Company name" autocomplete="organization"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="your@email.com" autocomplete="email"></div>
+        <div class="form-group">
+          <label class="form-label">Type of Engagement</label>
+          <select class="form-select">
+            <option value="" disabled selected>Select the closest match</option>
+            <optgroup label="Consulting">
+              <option>Product Risk Brief</option>
+              <option>Revenue Leak Audit</option>
+              <option>90-Day CX Sprint</option>
+              <option>Post-Sprint Retainer</option>
+            </optgroup>
+            <optgroup label="Advisory">
+              <option>Consumer Launch Advisory</option>
+              <option>AI Product Advisory</option>
+            </optgroup>
+            <optgroup label="Interview Coaching">
+              <option>Interview Prep Guide ($197)</option>
+              <option>Interview Coaching — Single Session ($750)</option>
+              <option>Interview Coaching — Full Prep ($2,500)</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option>CX Readiness Scorecard</option>
+              <option>Not sure yet</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">What's happening with your product</label><textarea class="form-textarea" placeholder="Describe the problem as it presents right now."></textarea></div>
+        <button type="submit" class="btn-submit">Submit</button>
+        <p class="form-footnote">Every message is read personally. Response within 2 business days when there is a fit.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">Blairview Ventures</span>
+  <ul class="footer-links">
+    <li><a href="#diagnostic">Diagnostic</a></li>
+    <li><a href="#practice">Practice</a></li>
+    <li><a href="#engagements">Engagements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="footer-copy">&copy; 2026 Blairview Ventures LLC &nbsp;&middot;&nbsp; Armonk, New York</span>
+</footer>
+
+<script>
+const toggle = document.getElementById('navToggle');
+const menu = document.getElementById('mobileMenu');
+toggle.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  toggle.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+function closeMenu() {
+  menu.classList.remove('open');
+  toggle.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+document.addEventListener('click', e => { if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>
+</body>
+</html>
