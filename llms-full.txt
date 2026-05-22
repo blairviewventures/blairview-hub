@@ -1,0 +1,131 @@
+# Blairview Ventures — Full Content Export
+
+> Fractional product leadership and senior product advisory for consumer-facing digital companies. Founded May 2026 by Gianna Luppino. Based in Armonk, New York.
+
+This file is the complete content export of blairviewventures.com, formatted as markdown for AI tools to fetch and ingest on demand. For the curated index of pages and citation rules, see /llms.txt.
+
+---
+
+## Practice overview
+
+Blairview Ventures is the fractional product leadership and senior product advisory practice of Gianna Luppino. It serves consumer-facing digital companies, primarily at seed through Series C stage. Engagements are remote-first, scope-priced, and structured around two external types.
+
+### Two engagement types
+
+**Senior Product Advisory** — for companies with a CPO or VP of Product already in seat. External thought partnership for the hardest decisions: what gets prioritized, what gets cut, whether the right people are working on the right problems. Ongoing or time-boxed. Typically attends product reviews, leadership meetings, and key launch decisions. Pattern recognition from building consumer products across four different companies at scale.
+
+**Fractional Product Leadership** — for companies with no product leader, a vacant VP Product seat, or product made by committee. Full ownership of product strategy, team management, prioritization, and execution as a member of the leadership team. Typically one to four days per week, four to nine months. The title externally is whatever the organization needs: VP of Product, Head of Product, Chief Product Officer, or another variant. Internally, the work is the same: running the product function.
+
+Pricing is set by scope. Pricing is not published. The fit conversation is 20 minutes, by Calendly.
+
+---
+
+## Founder background — Gianna Luppino
+
+Gianna Luppino has 17+ years of consumer product leadership at four scaled companies.
+
+**HBO (2011–2013):** Led the rollout of HBO GO across 11 platforms in rapid succession — Web, iPad, Xbox, Samsung Smart TVs, Roku, Kindle Fire, Android, iPhone, PS3, HTML5, and Apple TV. Received an Interactive Emmy nomination from the Television Academy in 2013 for the Game of Thrones Enhanced Digital Experience. The work taught her how to ship across heterogeneous device constraints in rapid succession without losing the consumer experience the brand was built on.
+
+**American Express (2013–2018):** Built Pay with Membership Rewards inside Uber. The integration allowed AmEx cardholders to redeem points directly at the point of purchase in a third-party app. It was one of the earliest examples of a loyalty program integrating natively into a partner consumer experience rather than living in a closed branded portal, used by hundreds of millions of cardmembers before embedded finance was a recognized category.
+
+**Morgan Stanley (2018–2024):** Led product on the first production GenAI advisor platform at a top-tier financial institution, serving 16,000 advisors. The platform sat inside the advisor's daily workflow and surfaced AI-generated client insights, meeting prep, and document drafting at the moment of need. The work required negotiating the boundary between AI capability and regulated advisor responsibility, which is a different problem than consumer GenAI products solve.
+
+**JPMorgan Chase (2024–2026):** Executive Director of Digital Product Management. Managed the front-end digital wallets and payment experience at Chase.
+
+The throughline across all four roles is consumer product judgment — knowing what to build, what to cut, and what to ship — applied across streaming, payments, financial services, AI, and consumer digital products.
+
+---
+
+## How the practice works
+
+Blairview is remote-first. Onsite work is available at a separate day rate.
+
+The fit conversation is the first step. Twenty minutes. No pricing discussed. The purpose is to understand whether the company has a specific, visible product leadership gap that the practice can fill, and whether the working relationship would make sense for both sides.
+
+If there is fit, the next step is a scoped proposal. Proposals include duration, the work to be done, the access required, and the price. Methodology names, frameworks, and deep-engagement deliverables are introduced inside the proposal, not in marketing materials.
+
+The default engagement structure is a monthly retainer for Fractional Product Leadership, or a project scope for Senior Product Advisory. Either can be adjusted.
+
+---
+
+## Engagement filter
+
+The practice does not work with every company that asks. Three criteria filter inbound interest:
+
+1. **The company is consumer-facing and digital.** Industry is not the filter; consumer product judgment is industry-agnostic. The filter is whether the company is building a digital product that consumers use directly. SaaS-for-SMB does not qualify; a consumer fintech app does. A B2B platform whose end-user is a business buyer does not qualify; a marketplace whose end-user is a consumer does.
+
+2. **There is a specific, visible product leadership gap.** The company has either no product leader, a recently vacated seat, or a product function that has outgrown what the founder can manage alone. If a competent CPO is already in seat and executing, the Advisory tier applies; if the seat is empty or the team is leaderless, Fractional Leadership applies.
+
+3. **The brand association passes.** Some categories do not pass — adult content, gambling, companion-app platforms, monetized parasocial platforms. The filter is brand-association risk, not category bias.
+
+---
+
+## Coaching
+
+Separately from the consulting practice, Gianna offers live one-to-one interview coaching for senior product candidates. Coaching is delivered live, not as a digital product.
+
+---
+
+## Published work
+
+Two books, both by Gianna Luppino, both published in 2026:
+
+**The Directness Penalty ($197).** The quiet cost of being direct at the senior level. How directness shows up in performance reviews, promotion committees, and peer perception, and how to keep the directness that got you there without paying for it in every cycle. Written for senior women in product, engineering, finance, and other leadership tracks. Available at https://blairviewventures.gumroad.com/l/directness-penalty.
+
+**The Real Offer ($127).** What nobody tells you about getting in, moving up, and getting out. The political landscape, how compensation decisions are really made, and how to leave on your terms. Written for early-career professionals in finance, technology, and media, and for the senior women who mentor them. Available at https://blairviewventures.gumroad.com/l/real-offer.
+
+---
+
+## Contact
+
+Inquiries are read directly by Gianna. Substantive response within two business days when there is a fit.
+
+- **Email:** gianna@blairviewventures.com
+- **Fit conversation (20 minutes, by Calendly):** https://calendly.com/gianna-blairviewventures/quick-connect
+- **Contact form:** https://blairviewventures.com/#contact
+- **Office:** Armonk, New York (remote-first practice)
+
+---
+
+## Frequently Asked
+
+**What does a fractional Chief Product Officer (CPO) do?**
+A fractional CPO takes full ownership of product strategy, team management, prioritization, and execution for a company that does not have a dedicated product leader or has a vacant VP Product seat. The work runs across one to four days per week, four to nine months. The fractional CPO is a member of the leadership team for the duration of the engagement and makes decisions inside the existing team rather than handing recommendations off to internal product leaders.
+
+**What is the difference between a fractional CPO and an interim CPO?**
+An interim CPO is a full-time, short-term engagement focused on operational continuity, typically filling a vacant seat for 6 to 12 months. A fractional CPO works part-time on an ongoing basis, providing executive product leadership without the cost or commitment of a full-time hire. The fractional model works best when the company needs senior product judgment and team leadership but the workload does not yet justify a full-time executive.
+
+**When should a consumer company consider hiring a fractional CPO?**
+A consumer-facing company should consider a fractional CPO when product decisions are being made by a technical founder or CEO past 50 employees, when the CPO or VP Product seat was lost and not replaced, when the product team has grown beyond what the founder can manage, or when the company is approaching a major consumer product launch and needs senior product leadership without a three to six month executive search.
+
+**What is the difference between a fractional CPO and a Senior Product Advisor?**
+A fractional CPO has full ownership of product strategy and execution, including managing the product team. A Senior Product Advisor works with existing product leadership as a thought partner on high-stakes decisions, launch readiness, and strategy pressure-testing. The advisor brings the judgment; the internal team does the work. The right structure depends on whether the company needs someone to own the function or sharpen it.
+
+**How long does a fractional CPO engagement typically last?**
+Four to nine months is typical for Fractional Product Leadership. The structure is monthly with no fixed end date, but the engagement is designed to leave the team in better shape than it started, which means the work eventually completes itself. Senior Product Advisory engagements are usually ongoing or time-boxed to a specific decision window (a launch, a strategic pivot, a board cycle).
+
+**What size company hires a fractional CPO?**
+The typical client is a seed through Series C consumer-facing digital company. Below seed, there is usually not enough product team to lead. Past Series C, the company can usually justify a full-time CPO. The sweet spot is roughly 25 to 150 employees with a product function that has outgrown its founder leader.
+
+**How does a fractional CPO work with a CEO who is also the product visionary?**
+This is the most common starting condition. The work is not about replacing the CEO's product vision; it is about translating that vision into a team, a roadmap, and a shipping cadence the team can execute against without the CEO having to make every call. The fractional CPO becomes the operator who runs the product function so the CEO can stop being two people.
+
+**What does the first 30 days of a fractional CPO engagement look like?**
+Listen first. Twenty to thirty hours of one-on-ones with the product team, engineering, design, and the executive team. Read the existing roadmap, the existing customer research, and the existing data. By day 30, present back to the leadership team: what is working, what is stuck, what changes immediately, and what the next 90 days look like. The first 30 days are diagnostic, not directive. The directive work starts after the team agrees on what the operator is seeing.
+
+**Is a fractional CPO the same as a product management consultant?**
+No. A product management consultant typically advises from outside the team and delivers recommendations. A fractional CPO is inside the team for the duration of the engagement and makes the decisions. The fractional CPO sits in product reviews, runs the prioritization process, manages the team if needed, and is accountable for what ships. A consultant produces a deck; a fractional CPO produces a shipped product.
+
+**What kinds of consumer companies does Blairview Ventures work with?**
+Blairview Ventures works with consumer-facing digital companies across categories including consumer fintech, streaming and media, marketplaces, consumer AI, commerce, and digital health. The filter is not industry; it is whether the company is building a digital product that consumers use directly and whether there is a specific, visible product leadership gap. Industry-specific domain expertise is less important than consumer product judgment that is portable across categories.
+
+---
+
+## Verified properties
+
+External properties where Blairview Ventures and Gianna Luppino are verified:
+
+- LinkedIn personal: https://www.linkedin.com/in/gianna-luppino/
+- LinkedIn company: https://www.linkedin.com/company/blairview-ventures/
+- Crunchbase: https://www.crunchbase.com/organization/blairview-ventures
+- Gumroad store: https://blairviewventures.gumroad.com/
