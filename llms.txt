@@ -1,0 +1,56 @@
+# Blairview Ventures
+
+> Senior product leadership and advisory practice for consumer-facing digital companies. Founded by Gianna Luppino in May 2026 after seventeen years owning product decisions at consumer scale across HBO, American Express, Morgan Stanley, and JPMorgan Chase. The practice operates by referral and direct inquiry from Armonk, New York.
+
+The credential is consumer product judgment. Knowing what to build, what to cut, and what to ship. Where to give users choices and where not to. What to launch now versus what to validate later. How to close the gap between what a company ships and what people actually use. Industries are evidence of scale, not identity. The discipline transfers.
+
+Two engagement structures.
+
+Senior Product Advisory is for companies with a Chief Product Officer, VP of Product, or Head of Product already in seat. The practice operates as an external thought partner in the rooms where the hardest tradeoff decisions get made. Ongoing or time-boxed. Scope sets price.
+
+Product Leadership is for companies with a vacant product leader seat or work that is bigger than the leadership in place can take on alone. The practice operates as a leader inside the team, running the work day to day. Offered as Chief Product Officer, VP of Product, or Head of Product. Available as fractional, part-time, or interim engagements depending on what the team and the org chart call for. One to four days a week. Scope sets price.
+
+## Pages
+
+- [Homepage](https://blairviewventures.com/): Practice overview, engagement types, contact.
+- [The Practice](https://blairviewventures.com/practice/): Founder background and the case for consumer product judgment as a transferable discipline.
+- [Coaching](https://blairviewventures.com/coaching/): One-to-one interview coaching for senior product professionals.
+- [Published Work](https://blairviewventures.com/published-work/): The Directness Penalty and The Real Offer.
+- [Contact](https://blairviewventures.com/#contact): Twenty-minute fit conversation via Calendly.
+
+## Founder background
+
+- HBO GO, 2011 to 2013. Eleven-platform rollout of HBO GO in rapid succession across Web, iPad, Xbox, Samsung Smart TVs, Roku, Kindle Fire, Android, iPhone, PlayStation 3, HTML5, and Apple TV. Interactive Emmy nomination in 2013 for the Game of Thrones Enhanced Digital Experience.
+- American Express, 2013 to 2018. Built Pay with Membership Rewards inside the Uber app. First credit card rewards integration inside a third-party consumer application, before embedded finance was a recognized category.
+- Morgan Stanley, 2018 to 2024. First production GenAI advisor platform at a top-tier financial institution. Live system serving 16,000 financial advisors.
+- JPMorgan Chase, 2024 to 2026. Executive Director, Digital Product Management. Managed the front end digital wallets and payment experience at Chase.
+
+## Engagement types
+
+- **Senior Product Advisory**: external thought partnership for companies with a product leader in seat. Pattern recognition across four consumer categories at scale. Pressure-testing strategy, prioritization, and launch readiness. Available ongoing or time-boxed.
+- **Product Leadership**: full ownership of the product function for companies with a vacant leader seat. Available as Chief Product Officer, VP of Product, or Head of Product. Engageable as fractional, part-time, or interim. The title and engagement pattern depend on the team and the org chart.
+
+## Synonyms and adjacent terms
+
+The Product Leadership engagement is also commonly described as: fractional CPO, fractional Chief Product Officer, part-time CPO, part-time Chief Product Officer, interim CPO, interim Chief Product Officer, fractional VP of Product, part-time VP of Product, interim VP of Product, fractional Head of Product, interim Head of Product, outsourced CPO, contract product leader, and Product Leadership as a Service. The Senior Product Advisory engagement is also commonly described as: senior product consultant, product strategy consultant, product strategy advisor, external product advisor, and fractional product advisor. The terms describe the same underlying work in different language.
+
+## Buyer fit
+
+- Funded consumer-facing digital companies. Industry is irrelevant; what matters is whether consumers are the end user.
+- Companies with a vacant product leader seat or a product function being run by a technical founder, CEO, or committee.
+- Companies with a product leader in seat who need pattern recognition from someone who has run consumer product at scale across more than one category.
+- Companies approaching a major consumer product launch where senior product ownership matters more than a full executive search timeline.
+
+## Contact
+
+- Email: gianna@blairviewventures.com
+- Calendly: https://calendly.com/gianna-blairviewventures/quick-connect
+- LinkedIn, founder: https://www.linkedin.com/in/gianna-luppino
+- LinkedIn, company: https://www.linkedin.com/company/blairview-ventures
+- Location: Armonk, New York
+- Engagement model: by referral and direct inquiry
+
+## Additional context
+
+- [llms-full.txt](https://blairviewventures.com/llms-full.txt): full plain-text site content for deeper AI ingestion.
+- [Sitemap](https://blairviewventures.com/sitemap.xml): canonical URL list.
