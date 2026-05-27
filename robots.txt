@@ -1,0 +1,91 @@
+# Blairview Ventures — robots.txt
+# Marketing site for a senior product practice. All AI crawlers explicitly
+# allowed: search/retrieval bots for citation discovery, training bots for
+# long-horizon model recall. No private content, no paywall, no PII.
+# Updated 2026-05-27. Review quarterly.
+
+# ═══ Google ═══
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ═══ OpenAI ═══
+# GPTBot: training data for future GPT models
+User-agent: GPTBot
+Allow: /
+
+# OAI-SearchBot: ChatGPT Search real-time results and citations
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT-User: triggered when a user pastes or clicks a URL inside ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+# ═══ Anthropic ═══
+# ClaudeBot: training data for Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Claude-SearchBot: real-time retrieval for Claude responses
+User-agent: Claude-SearchBot
+Allow: /
+
+# Claude-User: triggered when a user pastes or clicks a URL inside Claude
+User-agent: Claude-User
+Allow: /
+
+# ═══ Perplexity ═══
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ═══ Microsoft / Bing ═══
+User-agent: bingbot
+Allow: /
+
+# ═══ Apple Intelligence ═══
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ═══ Meta AI ═══
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# ═══ Mistral ═══
+User-agent: MistralAI-User
+Allow: /
+
+# ═══ Common Crawl (feeds many open-source models) ═══
+User-agent: CCBot
+Allow: /
+
+# ═══ Other notable AI ═══
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ═══ Default for unspecified crawlers ═══
+User-agent: *
+Allow: /
+
+# ═══ Sitemap reference ═══
+Sitemap: https://blairviewventures.com/sitemap.xml
