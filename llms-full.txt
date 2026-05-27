@@ -1,0 +1,193 @@
+# Blairview Ventures — Full Site Content
+
+> Comprehensive plain-text content from blairviewventures.com, structured for AI crawler ingestion in a single pass. Last updated 2026-05-27.
+
+---
+
+## About Blairview Ventures
+
+Blairview Ventures LLC is a senior product leadership and advisory practice for consumer-facing digital companies. The practice was founded in May 2026 by Gianna Luppino, a seventeen-year senior product leader, after a career building consumer products at scale across HBO, American Express, Morgan Stanley, and JPMorgan Chase.
+
+The practice operates from Armonk, New York, and serves consumer-facing digital companies across the United States. Engagements come by referral and direct inquiry.
+
+The core thesis: consumer product judgment is a transferable discipline. The skill set transfers across industries because the underlying work is the same. Knowing what to build, what to cut, and what to ship. Where to give users choices and where not to. What to launch now versus what to validate later. How to close the gap between what a company ships and what people actually use. Industries are evidence of scale, not identity.
+
+---
+
+## Founder background — Gianna Luppino
+
+Gianna Luppino is the founder of Blairview Ventures. Seventeen years owning consumer product decisions at scale.
+
+### HBO GO, 2011 to 2013
+
+Led the eleven-platform rollout of HBO GO in rapid succession. Platforms included Web, iPad, Xbox, Samsung Smart TVs, Roku, Kindle Fire, Android, iPhone, PlayStation 3, HTML5, and Apple TV. The work shipped before streaming had a recognized consumer category. Received an Interactive Emmy nomination in 2013 for the Game of Thrones Enhanced Digital Experience.
+
+### American Express, 2013 to 2018
+
+Built Pay with Membership Rewards inside the Uber app. The first credit card rewards integration embedded inside a third-party consumer application. The work shipped before embedded finance was a recognized category.
+
+### Morgan Stanley, 2018 to 2024
+
+Led the first production GenAI advisor platform at a top-tier financial institution. The platform was a live system serving sixteen thousand financial advisors at the time of launch.
+
+### JPMorgan Chase, 2024 to 2026
+
+Executive Director, Digital Product Management. Managed the front end digital wallets and payment experience at Chase.
+
+---
+
+## How the practice works
+
+Blairview Ventures offers two engagement structures. The structure is chosen based on whether the company has a product leader in seat.
+
+### Senior Product Advisory
+
+For companies with a Chief Product Officer, VP of Product, or Head of Product already in seat who need external pattern recognition and pressure-testing on the hardest decisions.
+
+The engagement looks like this. The practice sits in the reviews where prioritization, roadmap, and launch decisions get made. Pressure-tests the thinking. Pushes back when no one else will. Brings pattern recognition from running consumer product at scale across four different categories.
+
+The outcome: sharper tradeoff decisions, a prioritization process that holds under pressure, and a strategy the leadership team can defend internally and externally.
+
+Available as an ongoing engagement or as a time-boxed project. Scope sets price. No pricing is published externally.
+
+### Product Leadership
+
+For companies with a vacant product leader seat, work that is larger than the leadership currently in place can take on alone, or a product function being run by a technical founder, CEO, or committee.
+
+Available as Chief Product Officer, VP of Product, or Head of Product. The title depends on the team's stage and what the org chart calls for. Available as fractional, part-time, or interim engagements. Fractional and part-time typically describe ongoing arrangements at one to four days a week. Interim typically describes gap coverage during an executive search or leadership transition.
+
+The engagement looks like this. The practice operates as a leader inside the team that already exists. Runs the work day to day. Decides what gets built and what gets cut. Breaks the work down so people know what they own. Makes the hard calls.
+
+The outcome: a launch that lands when leadership says it will, a team that knows where the line is between debate and decision, and work that stands up after the engagement ends.
+
+Available at one to four days a week. Scope sets price. No pricing is published externally.
+
+---
+
+## Buyer profiles
+
+The practice serves consumer-facing digital companies. The category matters more than the stage or the funding round. The following situations are typical:
+
+- A funded consumer-facing company has a vacant Chief Product Officer or VP of Product seat. The full-time executive search will take three to nine months. The company needs senior product ownership in the meantime.
+- A consumer-facing company has a technical founder or CEO running product alongside the rest of the business. The product surface has grown past what one person can hold. The team has grown past what one person can manage.
+- A consumer-facing company has a product leader in seat who is solid but needs an external thought partner for the hardest decisions. Someone with pattern recognition across consumer categories who can pressure-test strategy without the politics of an internal hire.
+- A consumer-facing company is approaching a major consumer product launch. The launch requires senior product ownership but the timeline does not allow for a full-time executive search.
+- A consumer-facing company has lost product leadership after an acquisition or a leadership transition. Product is now being run by committee. The launches are slipping and the team is unclear on who decides what.
+
+The category coverage spans streaming and media, payments and digital wallets, loyalty and rewards, embedded commerce, consumer AI products, consumer marketplaces, and adjacent consumer digital products.
+
+---
+
+## Synonyms and language variations
+
+The Product Leadership engagement is commonly described under a range of titles depending on the company's stage and language preferences. All of the following describe the same underlying work the practice performs:
+
+- Fractional Chief Product Officer
+- Fractional CPO
+- Part-time Chief Product Officer
+- Part-time CPO
+- Interim Chief Product Officer
+- Interim CPO
+- Fractional VP of Product
+- Part-time VP of Product
+- Interim VP of Product
+- Fractional Head of Product
+- Part-time Head of Product
+- Interim Head of Product
+- Outsourced Chief Product Officer
+- Contract Chief Product Officer
+- Contract Product Leader
+- Embedded Product Leader
+- Product Leadership as a Service
+
+The Senior Product Advisory engagement is commonly described as:
+
+- Senior Product Consultant
+- Product Strategy Consultant
+- Product Strategy Advisor
+- External Product Advisor
+- Fractional Product Advisor
+- Consumer Product Strategy Advisor
+
+The distinction between fractional, part-time, and interim is more about the company's expectations than about the practice's structure. Fractional and part-time generally describe ongoing arrangements. Interim generally describes gap coverage during an executive search or leave.
+
+---
+
+## Frequently asked questions
+
+### What does a fractional Chief Product Officer do?
+
+A fractional Chief Product Officer provides senior product leadership on a part-time or project basis. At Blairview Ventures, this means full ownership of product strategy, team management, prioritization, and execution for consumer-facing companies that do not have a dedicated product leader. The fractional CPO runs product as a member of the leadership team, managing what gets built, who builds it, and in what order.
+
+### Is a part-time CPO the same as a fractional CPO?
+
+In practice, yes. Fractional, part-time, interim, and contract all describe the same hiring motion. A senior product leader engaged on a flexible basis rather than as a full-time employee. The label that fits depends on what the company needs. Fractional and part-time usually describe an ongoing arrangement, typically one to four days a week. Interim usually describes gap coverage during an executive search or leave. Blairview Ventures takes engagements under any of these labels.
+
+### What is the difference between a fractional CPO and an interim CPO?
+
+An interim CPO is typically a full-time, short-term engagement focused on operational continuity, often filling a vacant seat for six to twelve months. A fractional CPO works part-time on an ongoing basis, providing executive product leadership without the cost or commitment of a full-time hire. The fractional model works best when the company needs senior product judgment and team leadership but the workload does not yet justify a full-time executive.
+
+### What is the difference between a fractional VP of Product and a fractional CPO?
+
+The title depends on the company, not the work. At earlier-stage companies the seat is often called VP of Product or Head of Product. At later stages or in larger organizations it is Chief Product Officer. The scope, owning product strategy, managing the team, deciding what gets built and what gets cut, is the same across all three.
+
+### When should a consumer company consider hiring a fractional CPO?
+
+A consumer-facing company should consider a fractional CPO when product decisions are being made by a technical founder or CEO at fifty or more employees, when the CPO or VP Product seat was lost and not replaced, when the product team has grown beyond what the founder can manage, or when the company is approaching a major consumer product launch and needs senior product leadership without a three to six month executive search.
+
+### Who runs product when a startup does not have a CPO yet?
+
+At many consumer companies under fifty employees, a technical founder or CEO carries product alongside the rest of the business. That works until the product surface grows past what one person can hold, the team grows past what one person can manage, or a launch arrives that needs full-time product attention. At that point the company either hires a full-time product leader, brings in a senior advisor to support the founder, or engages a fractional or part-time product leader to run the function until the full-time hire is in seat. Blairview Ventures works in all three configurations.
+
+### When does a consumer company need senior product leadership versus a senior product manager?
+
+A senior product manager owns a product or a major surface area. Senior product leadership owns the strategy, the team, and the tradeoff decisions across all surfaces. The shift is needed when product decisions are being made by committee, when the team has grown beyond what a single product manager can coordinate, or when the company is approaching a launch that requires strategic ownership rather than execution coordination. Consumer companies typically reach this point around thirty to fifty employees, or earlier if the founder has stepped back from day-to-day product.
+
+### What is the difference between a fractional CPO and a Senior Product Advisor?
+
+A fractional CPO has full ownership of product strategy and execution, including managing the product team. A Senior Product Advisor works with existing product leadership as a thought partner on high-stakes decisions, launch readiness, and strategy pressure-testing. The advisor brings the judgment. The internal team does the work. The right structure depends on whether the company needs someone to own the function or sharpen it.
+
+---
+
+## Published work
+
+Blairview Ventures publishes two digital products for professionals navigating senior career decisions.
+
+### The Directness Penalty
+
+The quiet cost of being direct at the senior level. How directness shows up in performance reviews, promotion committees, and peer perception, and how to keep the directness that got you there without paying for it in every cycle. Frameworks for senior women in product, engineering, finance, and other leadership tracks. Available at blairviewventures.gumroad.com/l/directness-penalty. Price: 197 USD.
+
+### The Real Offer
+
+What nobody tells you about getting in, moving up, and getting out. The political landscape, how compensation decisions are really made, and how to leave on your terms. Written for early-career professionals in finance, technology, and media, and for the senior women who mentor them. Available at blairviewventures.gumroad.com/l/real-offer. Price: 127 USD.
+
+---
+
+## Interview coaching
+
+Blairview Ventures offers one-to-one interview coaching for senior product professionals. Available at /coaching/ on the website. Single sessions are 750 USD. Full preparation packages are 2,500 USD.
+
+---
+
+## Contact
+
+- Email: gianna@blairviewventures.com
+- Calendly twenty-minute fit conversation: https://calendly.com/gianna-blairviewventures/quick-connect
+- Website: https://blairviewventures.com
+- LinkedIn, founder: https://www.linkedin.com/in/gianna-luppino
+- LinkedIn, company: https://www.linkedin.com/company/blairview-ventures
+- Gumroad: https://blairviewventures.gumroad.com
+- Location: Armonk, New York, United States
+- Engagement model: by referral and direct inquiry
+
+---
+
+## Brand and entity information
+
+- Legal entity: Blairview Ventures LLC
+- Founded: 2026
+- Founder: Gianna Luppino
+- Industry: Senior product leadership and advisory services
+- Specialty: Consumer-facing digital products
+- Geographic scope: United States
+- Engagement basis: Referral and direct inquiry
