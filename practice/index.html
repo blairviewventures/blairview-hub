@@ -15,7 +15,7 @@
      VP of Product, Head of Product, Senior Product Advisory,
      and "Consumer-Facing" modifier for niche ownership.
      ═══════════════════ -->
-<title>About Gianna Luppino | Founder, Blairview Ventures | 17 Years Building Consumer Products at HBO, American Express, Morgan Stanley, and Chase</title>
+<title>About Gianna Luppino | Founder &amp; Head of Product, Blairview Ventures | 17 Years Building Consumer Products at HBO, American Express, Morgan Stanley, and Chase</title>
 <meta name="description" content="Gianna Luppino is the founder of Blairview Ventures. 17 years building consumer-facing digital products: HBO GO 11-platform rollout in rapid succession, Pay with Membership Rewards inside Uber at American Express, the first production GenAI advisor platform at Morgan Stanley serving 16,000 advisors, and digital wallets and payments at Chase as Executive Director.">
 
 <!-- Open Graph -->
@@ -61,7 +61,7 @@
         "width": 1024,
         "height": 1024
       },
-      "jobTitle": "Founder, Fractional Chief Product Officer, and Senior Product Advisor",
+      "jobTitle": "Founder, Head of Product, Fractional Chief Product Officer, and Senior Product Advisor",
       "description": "17 years building consumer-facing digital products at HBO, American Express, Morgan Stanley, and Chase. Fractional CPO, VP of Product, and Senior Product Advisor specializing in consumer product judgment, team management, prioritization, and product execution at scale.",
       "url": "https://blairviewventures.com/practice/",
       "worksFor": { "@id": "https://blairviewventures.com/#organization" },
@@ -87,6 +87,7 @@
         "https://www.linkedin.com/in/gianna-luppino"
       ],
       "hasOccupation": [
+        { "@type": "Occupation", "name": "Head of Product" },
         { "@type": "Occupation", "name": "Fractional Chief Product Officer" },
         { "@type": "Occupation", "name": "Fractional VP of Product" },
         { "@type": "Occupation", "name": "Senior Product Advisor" }
@@ -164,46 +165,156 @@
 <!-- ═══ PRACTICE ═══ -->
 <section class="section" style="background:var(--cream)" id="practice">
   <div class="inner">
-    <div class="practice-grid">
-      <div class="practice-bio-col">
-        <h1 class="display-md reveal reveal-d1" style="margin-bottom:14px">Consumer product judgment.</h1>
-        <p class="body-lg reveal reveal-d2">
-          Seventeen years of it, across four companies that had to earn their way in with real users. Consumer products don't get a grace period. People either come back or they don't. That constraint shapes how I think about the work: what to ship now versus what to validate, where to give users choices and where that's just friction, what's worth defending in a roadmap review and what isn't.<br><br>
-          Four companies, four very different categories, one underlying discipline. The judgment calls that made HBO GO work before streaming had a playbook are the same ones that close a retention gap at a Series B. That transfer, from one consumer context to another, is what I spend most engagements doing.
-        </p>
+    <!-- Inline styles for practice page v2 (2026-06-03) — restructured hero, credential grid -->
+    <style>
+      .practice-hero { padding: 0; margin: 0 0 56px; }
+      .practice-eyebrow {
+        font-family: 'Outfit', sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-soft, #5C5C5C);
+        margin: 0 0 16px;
+      }
+      .practice-bio {
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 1.65;
+        color: var(--ink, #1A1714);
+        max-width: 760px;
+        margin: 24px 0 0;
+      }
+      .practice-principle {
+        max-width: 760px;
+        margin: 0 0 56px;
+      }
+      .practice-principle p {
+        font-family: 'Outfit', sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+        color: var(--ink, #1A1714);
+        font-weight: 300;
+        margin: 0;
+      }
+      .credentials-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin: 0 0 56px;
+      }
+      @media (max-width: 720px) {
+        .credentials-grid { grid-template-columns: 1fr; }
+      }
+      .credential-card {
+        border-top: 2px solid var(--forest, #1F3D2E);
+        padding-top: 18px;
+        display: flex;
+        flex-direction: column;
+        min-height: 240px;
+      }
+      .cc-era {
+        font-family: 'Outfit', sans-serif;
+        font-size: 11px;
+        line-height: 1.4;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-soft, #5C5C5C);
+        margin: 0 0 4px;
+        font-weight: 500;
+        min-height: 16px;
+      }
+      .cc-tags {
+        font-family: 'Outfit', sans-serif;
+        font-size: 11px;
+        line-height: 1.4;
+        color: var(--ink-muted, #9A8E7E);
+        margin: 0 0 12px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        min-height: 16px;
+      }
+      .cc-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 21px;
+        font-weight: 500;
+        color: var(--ink, #1A1714);
+        margin: 0 0 14px;
+        line-height: 1.2;
+        letter-spacing: -0.005em;
+        min-height: 50px;
+      }
+      .cc-body {
+        font-family: 'Outfit', sans-serif;
+        font-size: 13px;
+        line-height: 1.6;
+        color: var(--ink, #1A1714);
+        margin: 0;
+        font-weight: 300;
+        min-height: 42px;
+      }
+      .cc-footer {
+        font-family: 'Outfit', sans-serif;
+        font-size: 10px;
+        line-height: 1.4;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-muted, #9A8E7E);
+        padding-top: 14px;
+        border-top: 0.5px solid rgba(31, 61, 46, 0.12);
+        margin-top: auto;
+      }
+    </style>
+
+    <div class="practice-hero">
+      <p class="practice-eyebrow reveal reveal-d1">Gianna Luppino &nbsp;&middot;&nbsp; Founder &amp; Head of Product</p>
+      <h1 class="display-md reveal reveal-d1" style="margin-bottom:0">Consumer product judgment.</h1>
+      <p class="practice-bio reveal reveal-d2">
+        Gianna Luppino is the founder of Blairview Ventures, a product practice for consumer companies. Seventeen years of consumer products used by hundreds of millions: HBO GO 0&rarr;1 across 11 platforms before streaming had a category, Pay with Membership Rewards inside Uber at American Express before embedded loyalty had a model, the first production GenAI advisor platform at Morgan Stanley serving 16,000 advisors, and the front end digital wallets and payment experience at Chase. Four companies, four industries. The judgment is the same: knowing what consumers will come back for, and what they won&rsquo;t. She partners with founders and product leaders making those calls.
+      </p>
+    </div>
+
+    <div class="practice-principle reveal reveal-d2">
+      <p>Consumer products don&rsquo;t get a grace period. People either come back or they don&rsquo;t. That constraint shapes the work: what to ship now versus what to validate, where to give users choices and where that&rsquo;s just friction, what&rsquo;s worth defending in a roadmap review and what isn&rsquo;t.</p>
+    </div>
+
+    <div class="credentials-grid reveal reveal-d1">
+
+      <div class="credential-card">
+        <p class="cc-era">2011 &ndash; 2013</p>
+        <p class="cc-tags">Streaming &middot; Media</p>
+        <p class="cc-title">HBO GO across 11 platforms</p>
+        <p class="cc-body">11-platform rollout in rapid succession before streaming was a recognized category.</p>
+        <p class="cc-footer">HBO &middot; Interactive Emmy nomination, 2013</p>
       </div>
-      <div class="timeline reveal reveal-d1">
-        <input type="checkbox" id="mc-timeline" class="mobile-collapse-input timeline-collapse-input">
-        <div class="tl-entry">
-          <p class="tl-era">2011 &ndash; 2013</p>
-          <p class="tl-tags">Streaming &middot; Media</p>
-          <p class="tl-title">HBO GO across 11 platforms</p>
-          <p class="tl-body">Launched HBO GO across 11 platforms before streaming was a recognized category. 0&rarr;1, no playbook. Web, iPad, Xbox, Samsung Smart TVs, Roku, Kindle Fire, Android, iPhone, PS3, HTML5, Apple TV.</p>
-          <p class="tl-credit">Interactive Emmy nomination, Game of Thrones Enhanced Digital Experience. Television Academy, 2013.</p>
-        </div>
-        <div class="tl-entry">
-          <p class="tl-era">2013 &ndash; 2018</p>
-          <p class="tl-tags">Loyalty &middot; Consumer Commerce</p>
-          <p class="tl-title">Pay with Membership Rewards inside Uber, American Express</p>
-          <p class="tl-body">The first credit card rewards product to live inside a third-party consumer app. Embedded loyalty mechanics into a product used by hundreds of millions, before embedded finance was a recognized category.</p>
-        </div>
-        <div class="tl-entry">
-          <p class="tl-era">2018 &ndash; 2024</p>
-          <p class="tl-tags">AI &middot; Wealth &middot; Product Ops</p>
-          <p class="tl-title">First production GenAI advisor platform and chatbot experience, Morgan Stanley</p>
-          <p class="tl-role">Executive Director, Digital Product Management</p>
-          <p class="tl-body">Crafted the GenAI advisor platform at a top-tier financial institution. Live system serving 16,000+. Proprietary OpenAI partnership.</p>
-          <p class="tl-body">Owned the advisor desktop and mobile platform end to end, with a full redesign from ideation through launch. Led the division's digital transformation from waterfall to agile across product strategy and operations.</p>
-        </div>
-        <div class="tl-entry">
-          <p class="tl-era">2024 &ndash; 2026</p>
-          <p class="tl-tags">Digital Wallets &middot; Consumer Banking</p>
-          <p class="tl-title">Digital wallets and payments, Chase</p>
-          <p class="tl-role">Executive Director, Digital Product Management &middot; UX, Proprietary Wallets</p>
-          <p class="tl-body">Managed the front end digital wallets and payment experience at JPMorgan Chase. Drove product improvements to keep Chase top of mind and top of wallet, everywhere cardholders spent and wanted to spend.</p>
-        </div>
-        <label class="mobile-collapse-toggle timeline-collapse-toggle" for="mc-timeline"><span class="more-label">Show full history &rarr;</span><span class="less-label">Show less</span></label>
+
+      <div class="credential-card">
+        <p class="cc-era">2013 &ndash; 2018</p>
+        <p class="cc-tags">Loyalty &middot; Consumer Commerce</p>
+        <p class="cc-title">Pay with Membership Rewards inside Uber</p>
+        <p class="cc-body">First credit card rewards product to live inside a third-party consumer app.</p>
+        <p class="cc-footer">American Express &middot; Sr. PM, Web &amp; Mobile UX</p>
       </div>
+
+      <div class="credential-card">
+        <p class="cc-era">2018 &ndash; 2024</p>
+        <p class="cc-tags">AI &middot; Wealth &middot; Product Ops</p>
+        <p class="cc-title">First production GenAI advisor platform</p>
+        <p class="cc-body">Live system serving 16,000 financial advisors. Proprietary OpenAI partnership.</p>
+        <p class="cc-footer">Morgan Stanley &middot; Exec. Director, Digital PM</p>
+      </div>
+
+      <div class="credential-card">
+        <p class="cc-era">2024 &ndash; 2026</p>
+        <p class="cc-tags">Digital Wallets &middot; Payments</p>
+        <p class="cc-title">Digital wallets and payments</p>
+        <p class="cc-body">Managed the front end digital wallets and payment experience at Chase.</p>
+        <p class="cc-footer">Chase &middot; Exec. Director, Digital PM</p>
+      </div>
+
     </div>
     <div class="practice-close">
       <p class="practice-close-statement">
