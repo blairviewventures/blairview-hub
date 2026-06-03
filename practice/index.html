@@ -165,154 +165,49 @@
 <!-- ═══ PRACTICE ═══ -->
 <section class="section" style="background:var(--cream)" id="practice">
   <div class="inner">
-    <!-- Inline styles for practice page v2 (2026-06-03) — restructured hero, credential grid -->
-    <style>
-      .practice-hero { padding: 0; margin: 0 0 56px; }
-      .practice-eyebrow {
-        font-family: 'Outfit', sans-serif;
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--ink-soft, #5C5C5C);
-        margin: 0 0 16px;
-      }
-      .practice-bio {
-        font-family: 'Playfair Display', serif;
-        font-weight: 400;
-        font-size: 19px;
-        line-height: 1.65;
-        color: var(--ink, #1A1714);
-        max-width: 64ch;
-        margin: 24px 0 0;
-      }
-      .practice-principle {
-        max-width: 64ch;
-        margin: 0 0 56px;
-      }
-      .practice-principle p {
-        font-family: 'Outfit', sans-serif;
-        font-size: 16px;
-        line-height: 1.75;
-        color: var(--ink, #1A1714);
-        font-weight: 300;
-        margin: 0;
-      }
-      .credentials-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
-        margin: 0 0 56px;
-      }
-      @media (max-width: 720px) {
-        .credentials-grid { grid-template-columns: 1fr; }
-      }
-      .credential-card {
-        border-top: 2px solid var(--forest, #1F3D2E);
-        padding-top: 18px;
-        display: flex;
-        flex-direction: column;
-        min-height: 240px;
-      }
-      .cc-era {
-        font-family: 'Outfit', sans-serif;
-        font-size: 11px;
-        line-height: 1.4;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--ink-soft, #5C5C5C);
-        margin: 0 0 4px;
-        font-weight: 500;
-        min-height: 16px;
-      }
-      .cc-tags {
-        font-family: 'Outfit', sans-serif;
-        font-size: 11px;
-        line-height: 1.4;
-        color: var(--ink-muted, #9A8E7E);
-        margin: 0 0 12px;
-        font-weight: 400;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        min-height: 16px;
-      }
-      .cc-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 21px;
-        font-weight: 500;
-        color: var(--ink, #1A1714);
-        margin: 0 0 14px;
-        line-height: 1.2;
-        letter-spacing: -0.005em;
-        min-height: 50px;
-      }
-      .cc-body {
-        font-family: 'Outfit', sans-serif;
-        font-size: 13px;
-        line-height: 1.6;
-        color: var(--ink, #1A1714);
-        margin: 0;
-        font-weight: 300;
-        min-height: 42px;
-      }
-      .cc-footer {
-        font-family: 'Outfit', sans-serif;
-        font-size: 10px;
-        line-height: 1.4;
-        font-weight: 500;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--ink-muted, #9A8E7E);
-        padding-top: 14px;
-        border-top: 0.5px solid rgba(31, 61, 46, 0.12);
-        margin-top: auto;
-      }
-    </style>
+    <!-- Practice page v3 (2026-06-03) — anchored to homepage typography. Uses canonical
+         classes (.label, .body-lg, .eng-grid, .eng-card, .eng-num, .eng-name, .eng-body,
+         .eng-footer) so the page matches the rest of the site exactly. No inline styles
+         beyond layout-specific margin tweaks. -->
 
-    <div class="practice-hero">
-      <p class="practice-eyebrow reveal reveal-d1">Gianna Luppino &nbsp;&middot;&nbsp; Founder &amp; Head of Product</p>
-      <h1 class="display-md reveal reveal-d1" style="margin-bottom:0">Consumer product judgment.</h1>
-      <p class="practice-bio reveal reveal-d2">
-        Gianna Luppino is the founder of Blairview Ventures, a product practice for consumer companies. Seventeen years of consumer products used by hundreds of millions: HBO GO 0&rarr;1 across 11 platforms before streaming had a category, Pay with Membership Rewards inside Uber at American Express before embedded loyalty had a model, the first production GenAI advisor platform at Morgan Stanley serving 16,000 advisors, and the front end digital wallets and payment experience at Chase. Four companies, four industries. The judgment is the same: knowing what consumers will come back for, and what they won&rsquo;t. She partners with founders and product leaders making those calls.
-      </p>
-    </div>
+    <p class="label reveal reveal-d1" style="margin-bottom:14px">Gianna Luppino &nbsp;&middot;&nbsp; Founder &amp; Head of Product</p>
+    <h1 class="display-md reveal reveal-d1" style="margin-bottom:0">Consumer product judgment.</h1>
+    <p class="body-lg reveal reveal-d2" style="max-width:64ch;margin-top:24px;margin-bottom:0">
+      Gianna Luppino is the founder of Blairview Ventures, a product practice for consumer companies. Seventeen years of consumer products used by hundreds of millions: HBO GO 0&rarr;1 across 11 platforms before streaming had a category, Pay with Membership Rewards inside Uber at American Express before embedded loyalty had a model, the first production GenAI advisor platform at Morgan Stanley serving 16,000 advisors, and the front end digital wallets and payment experience at Chase. Four companies, four industries. The judgment is the same: knowing what consumers will come back for, and what they won&rsquo;t. She partners with founders and product leaders making those calls.
+    </p>
 
-    <div class="practice-principle reveal reveal-d2">
-      <p>Consumer products don&rsquo;t get a grace period. People either come back or they don&rsquo;t. That constraint shapes the work: what to ship now versus what to validate, where to give users choices and where that&rsquo;s just friction, what&rsquo;s worth defending in a roadmap review and what isn&rsquo;t.</p>
-    </div>
+    <p class="body-lg reveal reveal-d2" style="max-width:64ch;margin-top:clamp(36px,4vw,56px);margin-bottom:clamp(48px,6vw,72px)">
+      Consumer products don&rsquo;t get a grace period. People either come back or they don&rsquo;t. That constraint shapes the work: what to ship now versus what to validate, where to give users choices and where that&rsquo;s just friction, what&rsquo;s worth defending in a roadmap review and what isn&rsquo;t.
+    </p>
 
-    <div class="credentials-grid reveal reveal-d1">
+    <div class="eng-grid reveal" style="grid-template-columns: repeat(2, 1fr);">
 
-      <div class="credential-card">
-        <p class="cc-era">2011 &ndash; 2013</p>
-        <p class="cc-tags">Streaming &middot; Media</p>
-        <p class="cc-title">HBO GO across 11 platforms</p>
-        <p class="cc-body">11-platform rollout in rapid succession before streaming was a recognized category.</p>
-        <p class="cc-footer">HBO &middot; Interactive Emmy nomination, 2013</p>
+      <div class="eng-card">
+        <div class="eng-num">2011 &ndash; 2013</div>
+        <div class="eng-name">HBO GO across 11 platforms</div>
+        <div class="eng-body">11-platform rollout in rapid succession before streaming was a recognized category.</div>
+        <div class="eng-footer">HBO &ensp;&middot;&ensp; Interactive Emmy nomination, 2013</div>
       </div>
 
-      <div class="credential-card">
-        <p class="cc-era">2013 &ndash; 2018</p>
-        <p class="cc-tags">Loyalty &middot; Consumer Commerce</p>
-        <p class="cc-title">Pay with Membership Rewards inside Uber</p>
-        <p class="cc-body">First credit card rewards product to live inside a third-party consumer app.</p>
-        <p class="cc-footer">American Express &middot; Sr. PM, Web &amp; Mobile UX</p>
+      <div class="eng-card">
+        <div class="eng-num">2013 &ndash; 2018</div>
+        <div class="eng-name">Pay with Membership Rewards inside Uber</div>
+        <div class="eng-body">First credit card rewards product to live inside a third-party consumer app.</div>
+        <div class="eng-footer">American Express &ensp;&middot;&ensp; Senior Product Manager, Web and Mobile UX</div>
       </div>
 
-      <div class="credential-card">
-        <p class="cc-era">2018 &ndash; 2024</p>
-        <p class="cc-tags">AI &middot; Wealth &middot; Product Ops</p>
-        <p class="cc-title">First production GenAI advisor platform</p>
-        <p class="cc-body">Live system serving 16,000 financial advisors. Proprietary OpenAI partnership.</p>
-        <p class="cc-footer">Morgan Stanley &middot; Exec. Director, Digital PM</p>
+      <div class="eng-card">
+        <div class="eng-num">2018 &ndash; 2024</div>
+        <div class="eng-name">First production GenAI advisor platform</div>
+        <div class="eng-body">Live system serving 16,000 financial advisors. Proprietary OpenAI partnership.</div>
+        <div class="eng-footer">Morgan Stanley &ensp;&middot;&ensp; Executive Director, Digital Product Management</div>
       </div>
 
-      <div class="credential-card">
-        <p class="cc-era">2024 &ndash; 2026</p>
-        <p class="cc-tags">Digital Wallets &middot; Payments</p>
-        <p class="cc-title">Digital wallets and payments</p>
-        <p class="cc-body">Managed the front end digital wallets and payment experience at Chase.</p>
-        <p class="cc-footer">Chase &middot; Exec. Director, Digital PM</p>
+      <div class="eng-card">
+        <div class="eng-num">2024 &ndash; 2026</div>
+        <div class="eng-name">Digital wallets and payments</div>
+        <div class="eng-body">Managed the front end digital wallets and payment experience at Chase.</div>
+        <div class="eng-footer">Chase &ensp;&middot;&ensp; Executive Director, Digital Product Management</div>
       </div>
 
     </div>
