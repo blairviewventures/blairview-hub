@@ -165,7 +165,7 @@
 <!-- ═══ PRACTICE ═══ -->
 <section class="section" style="background:var(--cream)" id="practice">
   <div class="inner">
-    <!-- Practice page v3.2 (2026-06-04) — anchored to homepage typography. Uses canonical
+    <!-- Practice page v3.3 (2026-06-04) — anchored to homepage typography. Uses canonical
          classes (.label, .body-lg, .eng-grid, .eng-card, .eng-num, .eng-name, .eng-body,
          .eng-footer) so the page matches the rest of the site exactly.
          
@@ -176,7 +176,14 @@
          removed; both paragraphs now span the full .inner container width to match the
          credentials grid below. Overrides the June 3 narrow-vs-wide visual contrast in
          favor of bio-to-grid width cohesion. Coaching page still uses 64ch on its body-lg
-         intro — tab-to-tab parity with coaching is intentionally not preserved here. -->
+         intro — tab-to-tab parity with coaching is intentionally not preserved here.
+         
+         Patch 3 (2026-06-04): Vertical rhythm tightened in the section. Operating principle
+         paragraph margin-top reduced from clamp(36px,4vw,56px) to clamp(24px,3vw,36px) and
+         margin-bottom reduced from clamp(48px,6vw,72px) to clamp(36px,4vw,56px). Creates
+         consistent 24-36px gap between content blocks above the credentials grid; preserves
+         a slightly larger gap between principle paragraph and grid to mark the section
+         transition. -->
 
     <div style="padding-bottom:clamp(24px,3vw,36px);margin-bottom:clamp(24px,3vw,36px);border-bottom:1px solid var(--rule);">
       <p class="label reveal reveal-d1" style="margin-bottom:14px">Gianna Luppino &nbsp;&middot;&nbsp; Founder &amp; Head of Product</p>
@@ -186,7 +193,7 @@
       Gianna Luppino is the founder of Blairview Ventures, a product practice for consumer companies. Seventeen years of consumer products used by hundreds of millions: HBO GO 0&rarr;1 across 11 platforms before streaming had a category, Pay with Membership Rewards inside Uber at American Express before embedded loyalty had a model, the first production GenAI advisor platform at Morgan Stanley serving 16,000 advisors, and the front end digital wallets and payment experience at Chase. Four companies, four industries. The judgment is the same: knowing what consumers will come back for, and what they won&rsquo;t. She partners with founders and product leaders making those calls.
     </p>
 
-    <p class="body-lg reveal reveal-d2" style="margin-top:clamp(36px,4vw,56px);margin-bottom:clamp(48px,6vw,72px)">
+    <p class="body-lg reveal reveal-d2" style="margin-top:clamp(24px,3vw,36px);margin-bottom:clamp(36px,4vw,56px)">
       Consumer products don&rsquo;t get a grace period. People either come back or they don&rsquo;t. That constraint shapes the work: what to ship now versus what to validate, where to give users choices and where that&rsquo;s just friction, what&rsquo;s worth defending in a roadmap review and what isn&rsquo;t.
     </p>
 
