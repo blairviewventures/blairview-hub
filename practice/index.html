@@ -165,14 +165,17 @@
 <!-- ═══ PRACTICE ═══ -->
 <section class="section" style="background:var(--cream)" id="practice">
   <div class="inner">
-    <!-- Practice page v3 (2026-06-03) — anchored to homepage typography. Uses canonical
+    <!-- Practice page v3.1 (2026-06-04) — anchored to homepage typography. Uses canonical
          classes (.label, .body-lg, .eng-grid, .eng-card, .eng-num, .eng-name, .eng-body,
-         .eng-footer) so the page matches the rest of the site exactly. No inline styles
-         beyond layout-specific margin tweaks. -->
+         .eng-footer) so the page matches the rest of the site exactly. Hero band (eyebrow + H1)
+         wrapped in a bottom-bordered div matching the Engagements section header pattern on
+         index.html — restores structural cohesion between the two pages. -->
 
-    <p class="label reveal reveal-d1" style="margin-bottom:14px">Gianna Luppino &nbsp;&middot;&nbsp; Founder &amp; Head of Product</p>
-    <h1 class="display-md reveal reveal-d1" style="margin-bottom:0">Consumer product judgment.</h1>
-    <p class="body-lg reveal reveal-d2" style="max-width:64ch;margin-top:24px;margin-bottom:0">
+    <div style="padding-bottom:clamp(24px,3vw,36px);margin-bottom:clamp(24px,3vw,36px);border-bottom:1px solid var(--rule);">
+      <p class="label reveal reveal-d1" style="margin-bottom:14px">Gianna Luppino &nbsp;&middot;&nbsp; Founder &amp; Head of Product</p>
+      <h1 class="display-md reveal reveal-d1" style="margin-bottom:0">Consumer product judgment.</h1>
+    </div>
+    <p class="body-lg reveal reveal-d2" style="max-width:64ch;margin-top:0;margin-bottom:0">
       Gianna Luppino is the founder of Blairview Ventures, a product practice for consumer companies. Seventeen years of consumer products used by hundreds of millions: HBO GO 0&rarr;1 across 11 platforms before streaming had a category, Pay with Membership Rewards inside Uber at American Express before embedded loyalty had a model, the first production GenAI advisor platform at Morgan Stanley serving 16,000 advisors, and the front end digital wallets and payment experience at Chase. Four companies, four industries. The judgment is the same: knowing what consumers will come back for, and what they won&rsquo;t. She partners with founders and product leaders making those calls.
     </p>
 
