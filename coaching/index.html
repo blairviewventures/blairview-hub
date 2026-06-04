@@ -78,16 +78,36 @@
 
 <main>
 
-<!-- ═══ COACHING ═══ -->
+<!-- ═══ COACHING ═══
+     Coaching page v3 (2026-06-04). Structural alignment to practice_index.html pattern.
+     
+     Patch 4a: Added .reveal and .reveal-dN classes to hero elements so the page uses
+     the same staggered fade-in transition on page load as practice, published-work,
+     and homepage. Previously rendered as a flat snap-in load.
+     
+     Patch 4b: Wrapped .label eyebrow + h1.display-md in the same bottom-bordered div
+     pattern used in practice and Engagements section header on index.html. Tightened
+     wrapper values to match practice v3.4: clamp(14px,1.8vw,20px) padding/margin.
+     
+     Patch 4c: Removed max-width:64ch from .body-lg intro paragraph; now spans full
+     .inner container width to match the two-card grid below, matching practice's
+     bio-to-grid width cohesion approach.
+     
+     Patch 4d: Tightened .body-lg margin-bottom from clamp(48px,5vw,72px) to
+     clamp(28px,3vw,40px) to match practice v3.4 principle-to-grid rhythm. -->
 <section class="section" style="background:var(--cream)" id="coaching">
   <div class="inner">
-    <p class="label" style="margin-bottom:14px">Interview Coaching</p>
-    <h1 class="display-md" style="margin-bottom:18px">The interview is not testing what you think it is testing.</h1>
-    <p class="body-lg" style="max-width:64ch;margin-bottom:clamp(48px,5vw,72px)">
+
+    <div style="padding-bottom:clamp(14px,1.8vw,20px);margin-bottom:clamp(14px,1.8vw,20px);border-bottom:1px solid var(--rule);">
+      <p class="label reveal reveal-d1" style="margin-bottom:14px">Interview Coaching</p>
+      <h1 class="display-md reveal reveal-d1" style="margin-bottom:0">The interview is not testing what you think it is testing.</h1>
+    </div>
+
+    <p class="body-lg reveal reveal-d2" style="margin-top:0;margin-bottom:clamp(28px,3vw,40px)">
       For product leaders at every level. The failure point is rarely capability. It is how you narrate it.
     </p>
 
-    <div class="coaching-compact-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.5vw,40px);padding-top:8px;">
+    <div class="coaching-compact-inner reveal reveal-d3" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.5vw,40px);padding-top:8px;">
       <div style="border-left:2px solid var(--gold-light);padding-left:18px;">
         <p class="label" style="margin-bottom:8px;color:var(--text-caption)">Single Session</p>
         <p style="font-family:var(--ff-body);font-size:14px;color:var(--text-body);line-height:1.65;font-weight:300;margin-bottom:16px;">90 minutes on a specific role, company, and level.</p>
