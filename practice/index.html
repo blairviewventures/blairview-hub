@@ -165,7 +165,7 @@
 <!-- ═══ PRACTICE ═══ -->
 <section class="section" style="background:var(--cream)" id="practice">
   <div class="inner">
-    <!-- Practice page v3.4 (2026-06-04) — anchored to homepage typography. Uses canonical
+    <!-- Practice page v3.5 (2026-06-04) — anchored to homepage typography. Uses canonical
          classes (.label, .body-lg, .eng-grid, .eng-card, .eng-num, .eng-name, .eng-body,
          .eng-footer) so the page matches the rest of the site exactly.
          
@@ -187,7 +187,12 @@
          to clamp(14px,1.8vw,20px). Operating principle margin-top reduced from clamp(24px,
          3vw,36px) to clamp(18px,2.2vw,28px); margin-bottom reduced from clamp(36px,4vw,
          56px) to clamp(28px,3vw,40px). Practice hero wrapper no longer matches the index.html
-         Engagements section wrapper dimensions; this is intentional and documented. -->
+         Engagements section wrapper dimensions; this is intentional and documented.
+         
+         Patch 7 (2026-06-04): Removed the .practice-close-statement italic close band
+         ("Four companies. One judgment call, repeated. Ship what matters. Cut what
+         doesn't.") per operator decision. The CTA button is retained inside .practice-close;
+         the centered border-top rule and padding now frame the CTA alone. -->
 
     <div style="padding-bottom:clamp(14px,1.8vw,20px);margin-bottom:clamp(14px,1.8vw,20px);border-bottom:1px solid var(--rule);">
       <p class="label reveal reveal-d1" style="margin-bottom:14px">Gianna Luppino &nbsp;&middot;&nbsp; Founder &amp; Head of Product</p>
@@ -233,10 +238,6 @@
 
     </div>
     <div class="practice-close">
-      <p class="practice-close-statement">
-        <span>Four companies. One judgment call, repeated.</span>
-        <span>Ship what matters. Cut what doesn&rsquo;t.</span>
-      </p>
       <a href="/#contact" class="btn btn-sage">Start a Conversation</a>
     </div>
   </div>
